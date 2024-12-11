@@ -44,12 +44,12 @@
         </fieldset>
        <fieldset>
             <label for="username">Set Username:</label><input type="text" id="username" name="uname"><br><br>
-            <label for="pass">Set Password:</label><input type="password" id="pass" name="password"><br><br>
+            <label for="pass">Set Password:</label><input type="password" title="atleast one cap alph, small alph, digit, symbol (@!#$%&?). length 5 to 12" id="pass" name="password" pattern=".*(?=.{5,12})(?=.*[a-zA-Z])(?=.*\d)(?=.*[@!#$%&?]).*"><br><br>
             <label for="cpass">Confirm Password:</label><input type="password" id="cpass" name="password"><br><br>
        </fieldset>
        <fieldset>
             <label>Select Technical Courses to Enroll:</label><br><br>
-            <input type="checkbox" id="course1" name="techcourses" value="web basics" checked>
+            <input type="checkbox" id="course1" name="techcourses" value="web basics" checked required>
             <label for="course1">Web Basics</label> 
             <input type="checkbox" id="course2" name="techcourses" value="sql" >
             <label for="course2">SQL</label> 
