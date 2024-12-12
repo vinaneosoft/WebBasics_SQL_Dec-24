@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        progress,meter{
+            height: 50px;
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <progress></progress> -->
+    <label for="fuelind">Fuel Indicator (in ltr)</label>
+    <meter id="fuelind" min="0" low="100" value="100" high="400" max="500"></meter>
+    <button type="button" onclick="start()">START RACE</button>
+    <script>
+       function start(){
+        const interval=window.setInterval(()=>{
+            const meterNode=document.getElementById("fuelind");
+            meterNode.value=--meterNode.value;
+            console.log(meterNode.value);
+            if(meterNode.value==0)
+                window.clearInterval(interval);
+        }, 50);
+       }
+    </script>
+</body>
+</html>

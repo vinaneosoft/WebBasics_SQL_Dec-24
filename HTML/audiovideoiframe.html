@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audiovideo</title>
+</head>
+<body>
+    <audio src="./Media/sampleaudio.mp3"  muted autoplay loop controls></audio>
+    <audio  muted autoplay loop controls>
+        <source src="./Media/sampleaudio.m4a" type="audio/m4a">
+        <source src="./Media/sampleaudio.wav" type="audio/wav">
+        <source src="./Mediaaaaa/sampleaudio.mp3" type="audip/mp3">
+        <source src="./Media/sampleaudio.mp3" type="audip/mp3">    
+        <source src="./Media/sampleaudio.mp3" type="audip/mp3">
+        <source src="./Media/sampleaudio.aac" type="audip/aac">
+    </audio>
+    <div>
+        <audio  muted autoplay loop controls>
+            <source src="./Media/sampleaudio.m4a">
+            <source src="./Media/sampleaudio.wav">
+            <source src="./Media/sampleaudio.aac">
+        </audio>
+        <p>Not supported format</p>
+    </div>
+   <hr>
+   <video src="./Media/big_buck_bunny_720p_1mb.mp4"  muted  loop controls height="300" width="300"></video>
+   <video  muted  loop controls height="400" width="400">
+        <source src="./Media/big_buck_bunny_720p_1mb.mkv" type="video/mkv">
+        <source src="./Media/big_buck_bunny_720p_1mb.ogg" type="video/ogg">
+        <source src="./Media/big_buck_bunny_720p_1mb.ava" type="video/ava">
+        <source src="./Media/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+        <source src="./Media/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+   </video>
+   <div>
+    <video  muted autoplay loop controls>
+        <source src="./Media/big_buck_bunny_720p_1mb.mkv" type="video/mkv">
+        <source src="./Media/big_buck_bunny_720p_1mb.ogg" type="video/ogg">
+        <source src="./Media/big_buck_bunny_720p_1mb.ava" type="video/ava">
+    </video>
+    <p>Not supported format</p>
+    </div>
+    <hr>
+    <h3>Embedding MEDIA in iframe: pdf, audio, video, image, text doc, html page</h3>
+    <iframe src="./Media/sampleaudio.mp3" name="inframe1" height="300" width="500" title="audio in iframe"></iframe>
+    <iframe src="./Media/big_buck_bunny_720p_1mb.mp4" name="iframe2" height="300" width="500" frameborder="0" title="video in iframe"></iframe>
+    <iframe src="./Media/sample-1.pdf" name="inframe3" height="300" width="500" title="pdf in iframe"></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-_5dLLUbXNc?si=gpGRu7lWrO9wWVXi" title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+    <object type="application/pdf" data="./Media/sample-1.pdf" width="250" height="200"></object>
+    <hr>
+    <embed type="video/mp4" src="./Media/big_buck_bunny_720p_1mb.mp4" width="250" height="200" />
+    <!-- implement logic of iframe to insert text document on web page, any other web page in iframe on web page-->
+    <!-- when user clicks on anchor tag, instead of navigating on that web page, 
+     target web page must be opened in iframe on same webpage-->
+</body>
+</html>
