@@ -13,9 +13,21 @@
         #article1 p{
             color: red;
         }
+        /*select next paragraph sibling of article1*/
+        #article1+p{
+            text-decoration: underline;
+        }
+        /*select all paragraph siblings of article1*/
+        #article1~p{
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque optio, iste, a veritatis tenetur esse illum accusamus rerum animi 
+        reiciendis sapiente nobis et in obcaecati repellendus. Labore ea ad culpa.
+    </p>
     <article id="article1">
         <p>  ----1----
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure temporibus optio placeat sed reiciendis eius ipsum rerum nemo suscipit rem recusandae veritatis
@@ -44,6 +56,10 @@
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure temporibus optio placeat sed reiciendis eius ipsum rerum nemo suscipit rem recusandae veritatis
         mollitia soluta eos aperiam praesentium numquam, illo officiis?
     </p>
+    <section>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos maxime reiciendis distinctio accusantium officiis animi. Error magni nulla suscipit nemo 
+        fugiat soluta. Alias, distinctio hic. Ut voluptas dolorum illo asperiores.
+    </section>
     <p> ----7-----
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure temporibus optio placeat sed reiciendis eius ipsum rerum nemo suscipit rem recusandae veritatis
         mollitia soluta eos aperiam praesentium numquam, illo officiis?
