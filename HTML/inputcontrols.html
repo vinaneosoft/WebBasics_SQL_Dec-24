@@ -44,7 +44,7 @@
         </fieldset>
        <fieldset>
             <label for="username">Set Username:</label><input type="text" id="username" name="uname"><br><br>
-            <label for="pass">Set Password:</label><input type="password" title="atleast one cap alph, small alph, digit, symbol (@!#$%&?). length 5 to 12" id="pass" name="password" pattern=".*(?=.{5,12})(?=.*[a-zA-Z])(?=.*\d)(?=.*[@!#$%&?]).*"><br><br>
+            <label for="pass">Set Password:</label><input type="text" title="atleast one cap alph, small alph, digit, symbol (@!#$%&?). length 5 to 12" id="pass" name="password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[@!#$%&?])[a-zA-Z\d@!#$%&?]{5,12}$"><br><br>
             <label for="cpass">Confirm Password:</label><input type="password" id="cpass" name="password"><br><br>
        </fieldset>
        <fieldset>
@@ -75,7 +75,7 @@
        </fieldset>
        <fieldset >
            <!--  <button type="submit">SUBMIT</button>  -->
-         <!--    <input type="submit" value="ENROLL"> -->
+            <input type="submit" value="ENROLL"> 
             <input type="image" src="https://th.bing.com/th/id/OIP.NGlXkbBkXLkhd9PGqGRjSQHaFj?rs=1&pid=ImgDetMain" height="50" width="100" alt="ENROLL">
             <input type="reset" >
        </fieldset>
