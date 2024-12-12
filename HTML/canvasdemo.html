@@ -26,10 +26,18 @@
         context.lineTo(120, 80);
         context.stroke();
 
-        context.moveTo(75, 50);
-        context.lineTo(100, 75);
-        context.lineTo(100, 25);
+        context.moveTo(200, 50);
+        context.lineTo(300, 30);
+        context.lineTo(150, 25);
+        context.lineTo(200, 50);
         context.fillStyle="red"
+        context.stroke();
+
+        context.beginPath();
+        context.arc(200, 200, 50, 0, Math.PI);
+        context.stroke();
+        context.beginPath();
+        context.arc(400, 200, 50, 0, Math.PI*2);
         context.fill();
     </script>
 </body>
