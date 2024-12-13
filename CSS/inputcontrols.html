@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-     
-        [name="empname"]{
-            background-color: yellow;
+        /*select input controls having placeholder attribute*/
+        [placeholder]{
+            border: 2px double blue;
         }
-        #labelta{
-          line-height: 0%;
-
+        /*select textfields to apply background color*/
+        [type='text']{
+            background-color: yellowgreen;
+        }
+        /*select input fields having attribute name=empname*/
+        input[name='empname']{
+            background-color: lightcoral;
+        }
+        /*select input field whose placeholder value contains a word 'mobile'*/
+        input[placeholder~="mobile"]{   /* * also allowed */
+            background-color: darkmagenta;
         }
     </style>
 </head>
@@ -28,7 +36,7 @@
        <fieldset>
             <label for="age">Age:</label><input type="number" min="15" max="40" title="age must be within 15 to 40" id="age" name="age" required><br><br>
             <!-- title will get added in validation messages of browser coming for pattern-->
-            <label for="mobile">Mobile Number:</label><input title="only digits allowed" type="text" minlength="10" maxlength="10" pattern="[0-9]*" id="mobile" name="mobile"><br><br>
+            <label for="mobile">Mobile Number:</label><input placeholder="10 digit mobile number" title="only digits allowed" type="text" minlength="10" maxlength="10" pattern="[0-9]*" id="mobile" name="mobile"><br><br>
             <label for="mailid">Email Id:</label><input type="email" id="mailid" name="mailid" ><br><br>
             <label for="birthdate">Birth Date:</label><input type="datetime-local" id="birthdate" name="birthdate"><br><br>
        </fieldset>
@@ -44,7 +52,7 @@
         </fieldset>
        <fieldset>
             <label for="username">Set Username:</label><input type="text" id="username" name="uname"><br><br>
-            <label for="pass">Set Password:</label><input type="text" title="atleast one cap alph, small alph, digit, symbol (@!#$%&?). length 5 to 12" id="pass" name="password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[@!#$%&?])[a-zA-Z\d@!#$%&?]{5,12}$"><br><br>
+            <label for="pass">Set Password:</label><input type="password" title="atleast one cap alph, small alph, digit, symbol (@!#$%&?). length 5 to 12" id="pass" name="password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[@!#$%&?])[a-zA-Z\d@!#$%&?]{5,12}$"><br><br>
             <label for="cpass">Confirm Password:</label><input type="password" id="cpass" name="password"><br><br>
        </fieldset>
        <fieldset>
@@ -82,6 +90,10 @@
        <!-- create new group of checkboxes for nontechnical courses to enroll -->
         <!-- type = radio id unique name : common value -->
     </form>
+
+    <ol name="empname">
+        <li>Hari</li>
+    </ol>
 
 </body>
 </html>

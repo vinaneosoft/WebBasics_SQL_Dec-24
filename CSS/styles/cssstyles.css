@@ -2,3 +2,15 @@
 h3{
     text-decoration: underline;
 }
+[name='head']{
+    background-color: aqua;
+}
+.heading
+{
+    background-color: lightgray;
+    color: brown;
+}
+
+#topheading{
+    background-color: darkgreen;
+}
