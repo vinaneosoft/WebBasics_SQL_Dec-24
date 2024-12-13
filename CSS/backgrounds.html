@@ -6,24 +6,37 @@
     <title>backgrounds</title>
     <style>
         body{
-          /*   background-image: url('https://th.bing.com/th/id/OIP.CSThJ0qpV3XKsURD0iKZ0AHaEK?rs=1&pid=ImgDetMain');
+            background-image: url('https://th.bing.com/th/id/OIP.CSThJ0qpV3XKsURD0iKZ0AHaEK?rs=1&pid=ImgDetMain');
             background-repeat: no-repeat;
             background-size: calc(100% - 200px);    /* 100% / contain , 700px, cover, we can give 2 values for width and height*/
-/*             background-position: top;
-            background-attachment: fixed; */
+            background-position: top;
+            background-attachment: fixed; 
+                /*shorthand property*/
             background: url('https://th.bing.com/th/id/OIP.CSThJ0qpV3XKsURD0iKZ0AHaEK?rs=1&pid=ImgDetMain') center/cover scroll  no-repeat;
-            /*shorthand property*/
         }
         #article1{
-            border: 2px solid yellow;
-            width: calc(100% - 100px);
             background-color : rgb(81, 42, 30, 0.8);  /*colorname, color code, rgb , opactiy : 0 to 1*/
-            background: rgb(119, 157, 104)
+            background: rgb(119, 157, 104);
+        }
+        .article{
+            border: 5px solid;
+            height: 300px;
+            width: calc(100% - 100px);
+        }
+        #article2{ 
+            background: linear-gradient(red, yellow, pink, blue, green);
+            background: linear-gradient(0.8rad, red, yellow, pink, blue, green); /*to bottom : default
+            to top, to left, to right , 40deg, 0.8rad*/
+            background: repeating-linear-gradient(yellow , black , white  10%); /* to bottom : default* last parameter : size of partition */
+        }
+        #article3{
+           background: radial-gradient(circle, red, yellow, pink, blue, green); /*ellipse : default*/
+           background: repeating-radial-gradient(circle, red, yellow 10%);
         }
     </style>
 </head>
 <body>
-    <article id="article1">
+    <article  class="article" id="article1">
         <p>  ----1----
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure temporibus optio placeat sed reiciendis eius ipsum rerum nemo suscipit rem recusandae veritatis
             mollitia soluta eos aperiam praesentium numquam, illo officiis?
@@ -43,7 +56,7 @@
             </p>
         </footer>
     </article>
-    <article id="article2">
+    <article class="article" id="article2">
         <p>  ----1----
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure temporibus optio placeat sed reiciendis eius ipsum rerum nemo suscipit rem recusandae veritatis
             mollitia soluta eos aperiam praesentium numquam, illo officiis?
@@ -63,7 +76,7 @@
             </p>
         </footer>
     </article>
-    <article id="article3">
+    <article class="article" id="article3">
         <p>  ----1----
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure temporibus optio placeat sed reiciendis eius ipsum rerum nemo suscipit rem recusandae veritatis
             mollitia soluta eos aperiam praesentium numquam, illo officiis?
