@@ -17,22 +17,36 @@
             /*short hand*/
             border-top: 5px green solid; /*any sequence*/
             border-bottom: 10px double darkblue;
+            border-left: 2px dotted darkmagenta;
+            border-right: 3px dashed lightsalmon;
+        }
+        #block2{
+            /*clockwise starting from top*/
+            border-style: solid;  /*all sides*/
+            border-style: solid dashed; /*top=b, right=l*/ 
+            border-style: solid dashed dotted;
+            border-style: solid dashed dotted double;
+            border-width: 5px;
+            border-color: darkcyan;
+        }
+        #block3,#block4{
+            border: 3px green solid ;
         }
     </style>
 </head>
 <body>
    <article>
         <div class="block" id="block1">
-            <b>INDIA</b>
+            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
         </div>
         <div class="block" id="block2">
-            <b>INDIA</b>
+            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
         </div>
         <div class="block" id="block3">
-            <b>INDIA</b>
+            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
         </div>
         <div class="block" id="block4">
-            <b>INDIA</b>
+            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
         </div>
    </article>
 </body>
