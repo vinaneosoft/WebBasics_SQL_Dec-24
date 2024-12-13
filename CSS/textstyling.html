@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling</title>
+    <style>
+        h2{
+            border: 2px solid;
+            color: orange;
+            font-family: 'Courier New', Courier, monospace;
+            opacity: 1; /*0 to 1*/
+            /* visibility: hidden; */ /*element is present in DOM, only noy visible*/
+            /* display: none; */ /*memory freed, element removed from DOM*/
+            font-weight: lighter;
+          /*   font-style: italic; */
+          /*The font-size and font-family values are required in short hand*/
+            font: italic bold 40px 'Courier New', Courier, monospace; /*style, weight, size, family*/
+        }
+        p{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <h2>Sachin Tendulkar</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Quas eveniet quos optio fugit labore repudiandae exercitationem, praesentium dicta laboriosam minus, ullam ab dignissimos sapiente? Praesentium explicabo repellat aut eum earum!
+            </p>
+        </header>
+    </article>
+</body>
+</html>
