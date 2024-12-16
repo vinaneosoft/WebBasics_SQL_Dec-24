@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .block,.image{
+            height: 200px;
+            width: 200px;
+        }
+        .block{
+            border: 3px solid darkviolet;
+            transition: 4s;
+        }
+        #block1:hover{
+            transform: translate(200px, 200px); /*x, y*/
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="block" id="block1">
+        <img class="image" id="sachin" src="../HTML/Images/sachin.webp" alt="sachin">
+    </div>
+
+   <!--  <script>
+        const imageNode=document.getElementById("sachin");
+        imageNode.addEventListener("mouseover", ()=>{
+            imageNode.src="https://images.hindustantimes.com/img/2022/10/19/1600x900/sachin_tendulkar_1666183850678_1666183855510_1666183855510.JPG"
+        })
+    </script> -->
+</body>
+</html>

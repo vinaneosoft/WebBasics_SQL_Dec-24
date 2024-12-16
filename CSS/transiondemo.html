@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .block{
+            font-size: 20px;
+            width: 100%;
+            height: 100px;
+            background: rgb(29, 175, 181, 0.5);
+            border: 10px solid;
+            transition-duration: 5s; /*transition works on numeric properties, on colors also*/
+            transition-property: background, height ;/*all is default*/
+            transition-delay: 3000ms; /*after a s/ms , transition will start*/
+            transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 2.3); /*ease : default*/
+
+            transition: 6s 1s ease-out;  /*on all with 1s delay*/
+            transition: 5s 1s height ease-out, 4s width ease-in, 3s background; 
+            transition: 3s;  /*on all no delay*/
+        }
+        #block1:hover{
+            width: 50%;
+            height: 200px;
+            border-width: 2px;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="block" id="block1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti dicta animi consequatur corporis vitae assumenda aspernatur, cupiditate aperiam
+         repudiandae incidunt laudantium eaque voluptates eius rem id similique vel quo! Et.
+         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti dicta animi consequatur corporis vitae assumenda aspernatur, cupiditate aperiam
+         repudiandae incidunt laudantium eaque voluptates eius rem id similique vel quo! Et.
+    </div>
+</body>
+</html>
