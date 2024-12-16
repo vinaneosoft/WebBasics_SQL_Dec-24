@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background: lightpink;
+            border: 2px solid;
+        }
+        div>b{
+            border: 2px solid red;
+            background: lightgreen;
+            width: 200px; height: 100px; /*not applicable*/
+            margin: 10px;
+            padding: 10px;
+           
+        }
+        div>b:first-child, div>b:nth-child(2){
+             display: block;  /*new line, h & w applicable*/
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <b>INDIA</b>
+        <b>INDIA</b>
+        <b>INDIA</b>
+        <b>INDIA</b>
+        <b>INDIA</b>
+    </div>
+    <div>
+        <b>INDIA</b>
+        <b>INDIA</b>
+        <b>INDIA</b>
+        <b>INDIA</b>
+        <b>INDIA</b>
+    </div>
+</body>
+</html>
