@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transform</title>
     <style>
-        .block,.image{
-            height: 200px;
-            width: 200px;
+        .block{
+            height: 300px;
+            width: 300px;
+            overflow: hidden;
+        }
+        .image{
+            width: 100%;
         }
         .block{
             border: 3px solid darkviolet;
             transition: 4s;
         }
         #block1:hover{
-            transform: translate(200px, 200px); /*x, y*/
+            transform: translateX(200px); /*x, y*/   /*rotate, rotateX, rotateY*/ 
         }
     </style>
     
