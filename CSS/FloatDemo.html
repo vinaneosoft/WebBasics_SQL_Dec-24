@@ -5,36 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BoxModel</title>
     <style>
+        article{
+            border:10px solid
+        }
         .block{
             height: 90px;
-            box-shadow: 30px 30px 20px;
             border: 4px double green;
-            border-radius: 50px;
             background: lightgray;
             margin: 20px;
             padding: 10px;
+        }
+        #block1, #block2{
+            float:left;
+        }
+        #block3, #block4{
+            background: darkcyan;
+            clear: both;
         }
     </style>
 </head>
 <body>
    <article>
         <div class="block" id="block1">
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
+            <b> 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
         </div>
         <div class="block" id="block2">
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
+            <b>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
         </div>
         <div class="block" id="block3">
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
+            <b>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
+
         </div>
         <div class="block" id="block4">
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
-            <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
+            <b>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit.  </b>
+    
+          
         </div>
    </article>
 </body>
