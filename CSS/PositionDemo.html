@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+   <style>
+    #block1{
+        border: 10px solid red;
+    }
+    .childblock{
+        border: 2px solid;
+        background: yellow;
+    }
+    #child1{
+        left:10px   /*it wont work as position : static */
+    }
+    #child2{
+        position: relative; /*relative to current position*/
+        left: 30px;  /*it will shift  from current position to 30px right side*/
+        top: 10px; /* it will shift  from current position to 10px bottom side */
+    }
+    .parent{
+        padding: 10px;
+    }
+    .parent:hover{
+        position: relative;
+    }
+    body{
+        border: 2px solid darkgrey; 
+    }
+    #parent1{
+        border: 2px solid red; 
+    }
+    #parent2{
+        border: 2px solid darkblue; 
+    }
+    #parent3{
+        border: 2px solid green; 
+    }
+    #boldele{
+        background: lightpink;
+        /*according to nearest positioned (other than static) parent (ancestor)*/
+       position: absolute;
+       top: 0px;
+    }
+   </style>
+</head>
+<body class="parent">
+    <section id="block1">
+        <div class="childblock" id="child1">
+            1
+            India is my country. All Indians are my brothers and sisters.
+            India is my country. All Indians are my brothers and sisters.
+            India is my country. All Indians are my brothers and sisters.
+        </div>
+        <div class="childblock" id="child2">
+            2
+            India is my country. All Indians are my brothers and sisters.
+            India is my country. All Indians are my brothers and sisters.
+            India is my country. All Indians are my brothers and sisters.
+        </div>
+    </section>
+    <hr>
+    <hr>
+    <article class="parent" id="parent1">
+        <section class="parent" id="parent2">
+            <div class="parent" id="parent3">
+                <b  id="boldele">
+                    India is my country. All Indians are my brothers and sisters.
+                    India is my country. All Indians are my brothers and sisters.
+                </b>
+            </div>
+        </section>
+    </article>
+</body>
+</html>
