@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        #flexcontainer1 img{
+            height:200px;
+            width: 200px;
+        }
+        #flexcontainer2 img{
+            height:100px;
+            width: 100px;
+        }
+        article figure{
+            border: 4px solid;
+            float: left;
+        }
+        article{
+            border: 4px solid green;
+        }
+        .container{
+            border: 4px double darkcyan;
+            padding: 3px;
+            display: flex; /*flex-direction : row (default)*/
+            flex-wrap: wrap; /*items gets wrapped to new line / new column*/
+           /*  justify-content: space-evenly; */ /*space-between, space-around, space-evenly*/
+          /*   align-content: center;  *//*container */
+              align-items: center;  /*partition*/
+        }
+        #flexcontainer1{
+            flex-direction: row;
+            width: 80%; /*height gets auto increased*/
+            height: 600px;
+        }
+        #flexcontainer2{
+            flex-direction: column;
+            height: 600px; /*width gets auto increased*/
+        }
+       .flexchild{
+          flex-basis: 100px; /*length  : width / height*/
+        }
+        #flexcontainer2 .flexchild{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="flexcontainer1">
+        <article class="flexchild" id="flexitem1">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Sachin Tendulkar</figcaption>
+            </figure>
+        </article>
+        <article class="flexchild" id="flexitem2">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Viral Kohli</figcaption>
+            </figure>
+        </article>
+        <article class="flexchild" id="flexitem3">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Mahendra Dhoni</figcaption>
+            </figure>
+        </article>
+        <article class="flexchild" id="flexitem4">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Yuvraj Singh</figcaption>
+            </figure>
+        </article>
+    </div>
+   
+</body>
+</html>
