@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pseudo elements</title>
+    <style>
+        #firstletter{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 40px;
+            color: aqua;
+            font-style: italic;
+        }
+        #subh::first-letter{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 45px;
+            color: rebeccapurple;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1 id="mainh"><span id="firstletter">I</span>ndian Cricket Team</h1>
+    <h1 id="subh">Sachin Tendulkar</h1>
 </body>
 </html>
