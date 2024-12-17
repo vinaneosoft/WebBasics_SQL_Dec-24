@@ -25,29 +25,27 @@
             padding: 3px;
             display: flex; /*flex-direction : row (default)*/
             flex-wrap: wrap; /*items gets wrapped to new line / new column*/
-           /*  justify-content: space-evenly; */ /*space-between, space-around, space-evenly*/
-          /*   align-content: center;  *//*container */
-             /* align-items: start; */ /*partition*/
-            
+             justify-content: center;  /*space-between, space-around, space-evenly*/
+             /* align-content: center; */  /*container */
+              align-items: start;  /*partition*/
         }
         #flexcontainer1{
             flex-direction: row;
             width: 80%; /*height gets auto increased*/
             height: 2000px;
-           /*  justify-content: center;  *//*flex-end*/
-           /* align-content: center; */
         }
         #flexcontainer2{
             flex-direction: column;
             height: 600px; /*width gets auto increased*/
-            /* justify-content: start; */
-            /* align-content: center; */
         }
        .flexchild{
           flex-basis: 100px; /*length  : width / height*/
         }
         #flexcontainer2 .flexchild{
             width: 200px;
+        }
+        #flexitem3{
+          align-self: center; /*it will override alignment given by align-items*/
         }
     </style>
 </head>
@@ -63,11 +61,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
                      Explicabo error deleniti porro est.</p>
             </section>
-            <section>
-                <h3>Introduction</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                     Explicabo error deleniti porro est.</p>
-            </section>
+            
         </article>
         <article class="flexchild" id="flexitem2">
             <figure>
