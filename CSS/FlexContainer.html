@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Float</title>
     <style>
-        article img{
+        #flexcontainer1 img{
             height:200px;
             width: 200px;
+        }
+        #flexcontainer2 img{
+            height:100px;
+            width: 100px;
         }
         article figure{
             border: 4px solid;
@@ -16,6 +20,17 @@
         article{
             border: 4px solid green;
         }
+        .container{
+            border: 4px double darkcyan;
+            padding: 3px;
+            display: flex; /*flex-direction : row (default)*/
+        }
+        #flexcontainer1{
+            flex-direction: row;
+        }
+        #flexcontainer2{
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
@@ -23,73 +38,93 @@
         <article class="flexchild" id="flexitem1">
             <figure>
                 <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
-                <figcaption>Sachin while Anchoring</figcaption>
+                <figcaption>Sachin Tendulkar</figcaption>
             </figure>
             <section>
                 <h3>Introduction</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
                      Explicabo error deleniti porro est.</p>
             </section>
-            <section>
-                <h3>About Birth</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                     Explicabo error deleniti porro est.</p>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                        Explicabo error deleniti porro est.</p>
-            </section>
+          
         </article>
         <article class="flexchild" id="flexitem2">
             <figure>
                 <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
-                <figcaption>Sachin while Anchoring</figcaption>
+                <figcaption>Viral Kohli</figcaption>
             </figure>
             <section>
                 <h3>Introduction</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
                      Explicabo error deleniti porro est.</p>
-            </section>
-            <section>
-                <h3>About Birth</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                     Explicabo error deleniti porro est.</p>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                        Explicabo error deleniti porro est.</p>
             </section>
         </article>
         <article class="flexchild" id="flexitem3">
             <figure>
                 <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
-                <figcaption>Sachin while Anchoring</figcaption>
+                <figcaption>Mahendra Dhoni</figcaption>
             </figure>
             <section>
                 <h3>Introduction</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
                      Explicabo error deleniti porro est.</p>
-            </section>
-            <section>
-                <h3>About Birth</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                     Explicabo error deleniti porro est.</p>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                        Explicabo error deleniti porro est.</p>
             </section>
         </article>
         <article class="flexchild" id="flexitem4">
             <figure>
                 <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
-                <figcaption>Sachin while Anchoring</figcaption>
+                <figcaption>Yuvraj Singh</figcaption>
             </figure>
             <section>
                 <h3>Introduction</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
                      Explicabo error deleniti porro est.</p>
             </section>
+        </article>
+    </div>
+    <hr>
+    <div class="container" id="flexcontainer2">
+        <article class="flexchild" id="flexitem21">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Sachin Tendulkar</figcaption>
+            </figure>
             <section>
-                <h3>About Birth</h3>
+                <h3>Introduction</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
                      Explicabo error deleniti porro est.</p>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
-                        Explicabo error deleniti porro est.</p>
+            </section>
+        </article>
+        <article class="flexchild" id="flexitem22">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Viral Kohli</figcaption>
+            </figure>
+            <section>
+                <h3>Introduction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
+                     Explicabo error deleniti porro est.</p>
+            </section>
+        </article>
+        <article class="flexchild" id="flexitem23">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Mahendra Dhoni</figcaption>
+            </figure>
+            <section>
+                <h3>Introduction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
+                     Explicabo error deleniti porro est.</p>
+            </section>
+        </article>
+        <article class="flexchild" id="flexitem24">
+            <figure>
+                <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
+                <figcaption>Yuvraj Singh</figcaption>
+            </figure>
+            <section>
+                <h3>Introduction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
+                     Explicabo error deleniti porro est.</p>
             </section>
         </article>
     </div>
