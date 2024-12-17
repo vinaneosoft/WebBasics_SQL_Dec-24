@@ -24,12 +24,18 @@
             border: 4px double darkcyan;
             padding: 3px;
             display: flex; /*flex-direction : row (default)*/
+            flex-wrap: wrap; /*items gets wrapped to new line / new column*/
         }
         #flexcontainer1{
             flex-direction: row;
+            width: 60%; /*height gets auto increased*/
         }
         #flexcontainer2{
             flex-direction: column;
+            height: 600px; /*width gets auto increased*//
+        }
+        .flexchild{
+            width: 300px;
         }
     </style>
 </head>
@@ -45,7 +51,6 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
                      Explicabo error deleniti porro est.</p>
             </section>
-          
         </article>
         <article class="flexchild" id="flexitem2">
             <figure>
@@ -81,6 +86,7 @@
             </section>
         </article>
     </div>
+    <hr>
     <hr>
     <div class="container" id="flexcontainer2">
         <article class="flexchild" id="flexitem21">
