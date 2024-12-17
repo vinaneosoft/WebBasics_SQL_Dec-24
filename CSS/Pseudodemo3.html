@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article, header, footer{
+            border: 2px solid;
+        }
+       
+        article:first-child{
+            background: yellow;
+        }
+         /*select 1st child of article and put some style*/
+         article>*:first-child{ 
+            background: linear-gradient(red, white, pink);
+        }
+         /*select last child of article and put some style*/  /*>: * is skipped still it is selecting any */
+         article>:last-child{ 
+            background: linear-gradient(blue, green, brown);
+        }
+    </style>
+</head>
+<body>
+    <article class="sachinarticle" id="article1">
+        <header>
+            <h1>SACHIN</h1>
+        </header>
+        <main>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+        </main>
+        <footer>
+            this is footer of Sachin Article
+        </footer>
+    </article>
+    <article class="sachinarticle">
+        <nav>
+            <h1>SACHIN</h1>
+        </nav>
+        <main>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+            <section>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, facere commodi labore porro ipsam laudantium ducimus quisquam nesciunt deleniti autem recusandae cumque, 
+                fugiat consequatur assumenda obcaecati rerum repudiandae vel velit.
+            </section>
+        </main>
+        <div>
+            this is footer of Sachin Article
+        </div>
+    </article>
+</body>
+</html>

@@ -16,12 +16,42 @@
         #avgage{
             text-align: right;
         }
+        /* select all trs inside tbody*/
+        tbody>tr{
+            color: blue;
+        }
+        tbody>tr:first-child{
+            color: green;
+            background: linear-gradient(yellow, pink);
+        }
+        tbody>tr:last-child{
+            color: yellow;
+            background: linear-gradient(blue, orange);
+        }
+        tbody>tr:nth-child(2){
+            color: purple;
+        }
+       
+       /*select 1st column in every tr*/
+       tr>td:first-child, tr>th:first-child{
+        background: lightgrey;
+       }
+
+        /*select 1st column in every tr of tbody*/
+        tbody>tr>td:first-child{
+            background: lightsalmon;
+        }
+        /*select 3rd cell in 3rd row of tbody*/
+        tbody>tr:nth-child(3)>td:nth-child(3)
+        {
+            background: darkorchid;
+        }
     </style>
      <link rel="stylesheet" href="./styles/cssstyles.css">
 </head>
 <body>
     <h3>  Front-end web developer course 2021</h3>
-    <table> <!-- border="4" -->
+    <table>
         <caption>
             Front-end web developer course 2021
         </caption>
@@ -34,14 +64,12 @@
             <tr><td>Harish</td><td>HTML tables</td><td rowspan="2">22</td></tr>
             <tr><td>Mahesh</td><td>Web accessibility</td></tr>
             <tr><td>Krupa</td><td>JavaScript frameworks</td><td>29</td></tr>
+            <tr><td>Mahesh</td><td>Web accessibility</td></tr>
+            <tr><td>Krupa</td><td>JavaScript frameworks</td><td>29</td></tr>
         </tbody>
         <tfoot>
             <tr><td id="avgage" colspan="2">Average Age</td><td>24</td></tr>
         </tfoot>
     </table> 
-    <!-- table
-     caption, tr, thead, tbody, tfoot
-     tr
-     td-->
 </body>
 </html>
