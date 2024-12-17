@@ -28,14 +28,17 @@
         }
         #flexcontainer1{
             flex-direction: row;
-            width: 60%; /*height gets auto increased*/
+            width: 80%; /*height gets auto increased*/
         }
         #flexcontainer2{
             flex-direction: column;
             height: 600px; /*width gets auto increased*//
         }
-        .flexchild{
-            width: 300px;
+       .flexchild{
+          flex-basis: 100px; /*length  : width / height*/
+        }
+        #flexcontainer2 .flexchild{
+            width: 200px;
         }
     </style>
 </head>
@@ -46,6 +49,11 @@
                 <img src="../HTML/Images/sachin.webp" alt="Sachin Tendulkar">
                 <figcaption>Sachin Tendulkar</figcaption>
             </figure>
+            <section>
+                <h3>Introduction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
+                     Explicabo error deleniti porro est.</p>
+            </section>
             <section>
                 <h3>Introduction</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum deserunt sunt reprehenderit nemo ducimus rerum praesentium. Velit ab illum at esse perspiciatis delectus sint?
