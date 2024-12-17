@@ -25,14 +25,21 @@
             padding: 3px;
             display: flex; /*flex-direction : row (default)*/
             flex-wrap: wrap; /*items gets wrapped to new line / new column*/
+            justify-content: center; /*space-between, space-around, space-evenly*/
+            align-content: center;
         }
         #flexcontainer1{
             flex-direction: row;
             width: 80%; /*height gets auto increased*/
+            height: 2000px;
+           /*  justify-content: center;  *//*flex-end*/
+           /* align-content: center; */
         }
         #flexcontainer2{
             flex-direction: column;
-            height: 600px; /*width gets auto increased*//
+            height: 600px; /*width gets auto increased*/
+            /* justify-content: start; */
+            /* align-content: center; */
         }
        .flexchild{
           flex-basis: 100px; /*length  : width / height*/
