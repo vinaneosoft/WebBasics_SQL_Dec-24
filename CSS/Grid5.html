@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #topheader{
+            grid-area: HEADER;
+        }
+        #bottomfooter{
+            grid-area: FOOTER;
+        }
+        #leftside{
+            grid-area: LEFT;
+        }
+        #mainsection{
+            grid-area: MAIN;
+        }
+        #rightside{
+            grid-area: RIGHT;
+            display: grid;
+            grid-template-columns: auto;
+        }
+        #gridcontainer{
+            border: 4px solid red;
+            display: grid;
+            grid-template-areas: 'HEADER HEADER HEADER HEADER HEADER HEADER'
+            'LEFT MAIN MAIN MAIN MAIN RIGHT'
+            'FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER'
+        }
+       #gridcontainer *{
+        border:2px solid green
+       }
+
+    </style>
+</head>
+<body>
+    <div id="gridcontainer">
+        <header id="topheader">
+            hading and navbar <br>
+            hading and navbar <br>
+            hading and navbar <br>
+            hading and navbar <br>
+            hading and navbar <br>
+        </header>
+        <div id="leftside">
+            left side vertical navbar <br>
+            left side vertical navbar <br>
+            left side vertical navbar <br>
+            left side vertical navbar <br>
+            left side vertical navbar <br>
+            left side vertical navbar <br>
+            left side vertical navbar <br>
+
+            left side vertical navbar <br>
+        </div>
+        <div id="mainsection">
+            main contents
+        </div>
+        <div id="rightside">
+            <section>
+                right side advertizement 1
+            </section>
+            <section>
+                right side advertizement 2
+            </section>
+        </div>
+        <footer id="bottomfooter">
+            copyright contents, section, extra link and icons <br>
+            copyright contents, section, extra link and icons <br>
+            copyright contents, section, extra link and icons <br>
+            copyright contents, section, extra link and icons <br>
+        </footer>
+    </div>
+</body>
+</html>
