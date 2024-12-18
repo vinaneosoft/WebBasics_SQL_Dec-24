@@ -10,8 +10,8 @@
             width: 50%;
             height: 400px;
             display: grid;
-            grid-template-columns: 50px 40px auto 40px 50px;
-            grid-template-rows : 20% 80px auto;
+            grid-template-columns: [cl1] 50px [cl2] 40px [cl3] auto [cl4] 40px [cl5] 50px [cl6 colend] ;
+            grid-template-rows : [rl1] 20% [rl2] 80px [rl3] auto [rowend];
             row-gap: 10px;
             column-gap: 5px;
             gap: 3px;
@@ -27,17 +27,17 @@
             height: 100%;
         }
         #image1{
-            grid-column-start: 1;
-            grid-column-end: 3;
+            grid-column-start: cl1;
+            grid-column-end: cl3;
         }
         #image2{
-            grid-column-start: 3;
-            grid-row-start: 1;
-            grid-row-end: 3;
+            grid-column-start: cl3;
+            grid-row-start: rl1;
+            grid-row-end: rl3;
         }
         #bottomimage{
-            grid-column-start: 3;
-            grid-column-end: 6;
+            grid-column-start: cl3;
+            grid-column-end: colend;
         }
         .grid img:hover{
             transform: scale(2);
