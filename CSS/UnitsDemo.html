@@ -20,12 +20,24 @@
         #child2{
             font-size: 2em; /*2 * fontsize of ele (parent / current size)*/
         }
+        #subtitle{
+            font-size: 0.8em;
+            border: 0.05em green solid;  /*0.05 * 0.8 * 32 = 1.28px */
+        }
+        #heading1{
+            border: 1.28px solid green
+        }
+        #heading2{
+            border: 0.5rem solid purple; /*0.5 * 16 = 8px*/
+        }
     </style>
 </head>
 <body>
     <header>
         <span id="heading">Sachin Tendulkar</span><br>
         <b id="parent">India is my country. <i id="child1">India</i> is my <i id="child2">country</i></b>
+        <h1 id="heading1">Indian Cricket Team <span id="subtitle">Great team</span></h1>
+        <h1 id="heading2">Indian Cricket Team <small>Great team</small></h1>
     </header>
 </body>
 </html>
