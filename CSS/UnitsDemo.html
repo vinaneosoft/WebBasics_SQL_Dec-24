@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        /*root font size : 16px*/
+        /*heading span must have double font size of root*/
+
+        #heading{
+            font-size: 2rem /*2*20 / 2*16 / 2*14*/
+        }
+        #parent{
+            font-size: 20px;
+        }
+        #child1{
+            font-size: 2rem; /*2 * fontsize of root*/
+        }
+        #child2{
+            font-size: 2em; /*2 * fontsize of ele (parent / current size)*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span id="heading">Sachin Tendulkar</span><br>
+        <b id="parent">India is my country. <i id="child1">India</i> is my <i id="child2">country</i></b>
+    </header>
+</body>
+</html>
