@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+           border: 2px solid red;
+        }
+        /*mobile first approach*/
+        div{
+            background: lightblue;
+            border: 2px solid red;
+            display: inline-block;
+            width: 100%;
+        }
+        @media screen and (min-width:768px) and (max-width:991px){
+           div{
+                width: 48%;
+           }
+       }
+       @media screen and (min-width:992px){
+           div{
+                width: 24%;
+           }
+       }
+    </style>
+</head>
+<body>
+    <div>
+        block1
+    </div>
+    <div>
+        block2
+    </div>
+    <div>
+        block3
+    </div>
+    <div>
+        block4
+    </div>
+</body>
+</html>
