@@ -64,3 +64,31 @@ console.log(s1.slice(-5)); // counts from end of string
 console.log(s1);
 console.log(s1.substring(5,0)); //0,5
 console.log(s1.slice(5,0)); // empty string
+console.log(s1.substring(-15,-5))// 0,0
+console.log(s1.slice(-15,-5))
+console.log(s1.slice(10,-5))
+console.log(s1.slice(-5,10))
+console.log(s1.substring(-5,10)) //0, 10
+console.log(s1.substring(s1.length-1)) 
+console.log(s1.charAt(s1.length-1));
+
+
+const st1="India";
+const st2="india";
+
+const b=st1.toLowerCase()==st2.toLowerCase()
+console.log(b);
+
+let m1="hi"
+let m2=new String("hi");
+
+console.log(m1.valueOf()==m2.valueOf());
+console.log("---");
+
+console.log(m1.valueOf()===m2.valueOf());
+
+let num=67;
+let num2="67";
+
+console.log(num==num2);
+console.log(num===num2);
