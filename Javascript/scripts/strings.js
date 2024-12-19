@@ -37,9 +37,30 @@ console.log(result);
 let message="come to my house";
 console.log(message.concat("at Rabale"));
 console.log(message);
-
 message=message + " at pune";
 console.log(message);
 
 
+s1="    India is my country. I love my India country. I like to live here    ";
+console.log( s1.length);
+s1=s1.trim();
+console.log( s1.length);
+let c=s1.charAt(1);
+console.log(c);
+console.log(s1.toLowerCase());
+console.log(s1.toUpperCase());
 
+console.log(s1);
+console.log(s1.substring(0,5));
+console.log(s1.slice(0,5));
+console.log(s1.substring(6));
+console.log(s1.slice(6));
+console.log(s1.substring());
+console.log(s1.slice());
+console.log("negative in substring");
+console.log(s1.substring(-5));  // 0
+console.log("negative in slice");
+console.log(s1.slice(-5)); // counts from end of string
+console.log(s1);
+console.log(s1.substring(5,0)); //0,5
+console.log(s1.slice(5,0)); // empty string
