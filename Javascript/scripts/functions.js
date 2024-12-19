@@ -25,7 +25,7 @@ document.write("</ol>")
 
 
 const num=67;
-addNumbers(45,78);
+//addNumbers(45,78);
 let addNumbers=function(num1,num2){
     return num1+num2;
 }
@@ -43,11 +43,10 @@ const subNumbers=function(num1,num2){
 console.log(subNumbers(45,23));
 
 /* Assignment to constant variable. */
-subNumbers=function(num1,num2,num3){
+/* subNumbers=function(num1,num2,num3){
     return num1-num2-num3;
 }
-
-console.log(subNumbers(45,23,12));
+console.log(subNumbers(45,23,12)); */
 
 
 
