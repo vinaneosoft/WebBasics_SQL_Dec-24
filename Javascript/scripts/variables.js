@@ -1,5 +1,7 @@
 
 // dynamicaly typed lang
+
+// camel case, noun
 var num1;
 num1=67899; //number
 console.log(num1);
