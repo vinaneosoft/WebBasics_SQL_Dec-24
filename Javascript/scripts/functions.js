@@ -53,8 +53,8 @@ console.log(subNumbers(45,23,12)); */
 const getName=()=>{
     console.log("Vina Patil");
 }
-
 getName();
+
 
 const cubeFun=(num)=>{
     return num*num*num;
@@ -75,9 +75,10 @@ const cubeFun3=num=>console.log( num*num*num)
 
 cubeFun3(4);
 
-
 /* 3. if arrow function contains single return stmt in body then {} are optional, return keyword not allowed
 value will be automatically returned by a function*/
 const cubeFun4=num=>num*num*num;
-
 console.log(cubeFun4(5));
+
+const cubeFun5=num=>{return num*num*num};
+console.log(cubeFun5(5));
