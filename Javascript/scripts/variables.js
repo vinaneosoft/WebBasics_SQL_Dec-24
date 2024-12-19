@@ -58,7 +58,14 @@ var myname="harish";  // var type
 console.log(myname);
 
 
-console.log(sirname);  // not defined
-let sirname="poojari"   // let type
-console.log(sirname);
+//console.log(sirname);  // not defined
+sirname="poojari"   // let type
+console.log(sirname);console.log(sirname);console.log(sirname);console.log(sirname);console.log(sirname);
+
+console.log(sirname)
+console.log(sirname)
+
+const pie=3.142;
+pie=3.14444
+
 
