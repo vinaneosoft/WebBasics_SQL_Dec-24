@@ -50,3 +50,34 @@ console.log(subNumbers(45,23,12)); */
 
 
 
+const getName=()=>{
+    console.log("Vina Patil");
+}
+
+getName();
+
+const cubeFun=(num)=>{
+    return num*num*num;
+}
+
+console.log(cubeFun(4));
+
+// features
+/* 1. if arrow function has single formal argument then () are optional */
+const cubeFun2=num=>{
+    return num*num*num;
+}
+console.log(cubeFun2(4));
+
+/* 2. if arrow function contains single stmt in body then {} are optional*/
+
+const cubeFun3=num=>console.log( num*num*num)
+
+cubeFun3(4);
+
+
+/* 3. if arrow function contains single return stmt in body then {} are optional, return keyword not allowed
+value will be automatically returned by a function*/
+const cubeFun4=num=>num*num*num;
+
+console.log(cubeFun4(5));
