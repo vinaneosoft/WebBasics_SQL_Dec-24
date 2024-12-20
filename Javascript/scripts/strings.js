@@ -87,8 +87,4 @@ console.log("---");
 
 console.log(m1.valueOf()===m2.valueOf());
 
-let num=67;
-let num2="67";
-
-console.log(num==num2);
-console.log(num===num2);
+m1.
