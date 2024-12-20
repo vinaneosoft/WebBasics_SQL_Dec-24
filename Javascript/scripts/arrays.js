@@ -2,7 +2,7 @@
 // dynamic: no fix size, they can grow
 // direct declation
 const nums=[56,78,356,789,456,88];
-const names=["pooja",'pritam','kaveri','reema','isha']
+let names=["pooja",'pritam','kaveri','reema','isha']
 const arr=[12, 'hari',5678.789, true, 34, "om"];
 
 let employees=[
@@ -74,6 +74,33 @@ const joined=names.join("-");
 
 // slice
 const subarry=names.slice(0,2)
+console.log(names);
+// arrays are mutable : changes will be stored in same array and extra reference will be provided to
+//that array
+let ref=names.fill("new value", 0,2)
+console.log(names);
+console.log(ref);
+
+let reverse=names.reverse();
+console.log(names);
+console.log(reverse);
+
+
+const courses=['Web basics', 'PYTHON','sql','java',]
+console.log(courses);
+courses.sort(); //this method mutates the array and returns a reference to the same array.
+console.log(courses);
+
+courses.sort((s1,s2)=>{
+    console.log(s1);
+    console.log(s2);
+    return s1.toLowerCase().localeCompare(s2.toLowerCase())
+})
+console.log(courses);
+
+courses.sort((s1,s2)=>s1.toLowerCase().localeCompare(s2.toLowerCase()))
+console.log(courses);
+
 
 
 let ob1={
