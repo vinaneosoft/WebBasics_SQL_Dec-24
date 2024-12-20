@@ -54,5 +54,20 @@ for(age of babyages){
 }
 console.log(sum);
 // reduce
-let summ=babyages.reduce((prev, current)=>prev+current)
+let summ=babyages.reduce((prev, current)=>prev+current) // acc, current value of array
 console.log(summ);
+// prev=6, current=3 6+3 , prev=9
+//prev=9, current=8 , 9+8, prev=17
+//....
+// how to set any custom initial value to prev??
+let summ2=babyages.reduce((prev, current)=>prev+current, 20)
+console.log(summ2);
+// prev=20, current=6 26 , prev=26
+// prev=26, current=3 29 , prev=29
+//prev=29, current=8 , 29+8, prev=37
+//...
+
+// increment age by 1 for every age which is less than 5
+// make function chaining
+
+babyages.filter(num => num < 5).map(num => num + 1).forEach(num => console.log(num));
