@@ -27,23 +27,7 @@ let employees=[
 
 const numsar=new Array(67,78,45,34,23,56,7,8,67);
 const namesar=new Array("hari","pooja","Poonam");
-const emparr=new Array(
-    {
-        id:3455,
-        ename:"hari",
-        bsalary:56788
-    },
-    {
-        id:678,
-        ename:"hari",
-        bsalary:56788
-    },
-    {
-        id:455,
-        ename:"hari",
-        bsalary:56788
-    }
-)
+
 
 let ar1=[]; //0
 
@@ -100,6 +84,35 @@ console.log(courses);
 
 courses.sort((s1,s2)=>s1.toLowerCase().localeCompare(s2.toLowerCase()))
 console.log(courses);
+
+const emparr=new Array(
+    {
+        id:3455,
+        ename:"hari",
+        bsalary:56788
+    },
+    {
+        id:678,
+        ename:"hari",
+        bsalary:56788
+    },
+    {
+        id:455,
+        ename:"hari",
+        bsalary:56788
+    }
+)
+// searching
+// display whole array
+for(let i=0;i<emparr.length;i++){
+    console.log(emparr[i]);
+}
+console.log("-------------");
+//find employee having id 455
+for(let emp of emparr){
+    if(emp.id==455)
+        console.log(emp);
+}
 
 
 
