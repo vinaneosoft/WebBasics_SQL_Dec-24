@@ -110,10 +110,26 @@ for(let i=0;i<emparr.length;i++){
 console.log("-------------");
 //find employee having id 455
 for(let emp of emparr){
-    if(emp.id==455)
+    if(emp.id==455){
         console.log(emp);
+        break;
+    }
 }
-
+console.log("-------------");
+//increment salary by 5000 of employee having id 678
+for(let emp of emparr){
+    if(emp.id==678){
+       emp.bsalary=emp.bsalary+5000
+       break;
+    }
+}
+console.log(emparr);
+//increment salary by 5000 for every employee
+for(let emp of emparr){
+       emp.bsalary=emp.bsalary+5000 
+}
+const empswithincrement=emparr.map(employee=>employee.bsalary+5000)
+console.log(empswithincrement);
 
 
 let ob1={
