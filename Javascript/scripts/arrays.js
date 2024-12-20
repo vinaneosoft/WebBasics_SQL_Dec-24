@@ -49,7 +49,7 @@ let ar1=[]; //0
 
 ar1[0]=123;
 ar1[1]=567;   //2
-
+//array API
 ar1.push(67)
 ar1.push(78);
 ar1.unshift(7777); //5
@@ -59,7 +59,21 @@ ar1[2]=66666;
 console.log(ar1);
 
 //splice
-//array API
+ar1.splice(3,2)  // start, deleteCount
+console.log(ar1);
+ar1.splice(0,1,12111,44444)  // start, deleteCount, elements to replace
+console.log(ar1);
+ar1.splice(3,0,789)
+console.log(ar1);
+
+//pop, shift
+
+names=["pooja",'pritam','kaveri','reema','isha']
+//join
+const joined=names.join("-");
+
+// slice
+const subarry=names.slice(0,2)
 
 
 let ob1={
@@ -92,7 +106,7 @@ funref();
 
 
 
-class NeoEmployee{
+class Employee{
         id;
         ename;
         salary;
