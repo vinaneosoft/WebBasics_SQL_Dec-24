@@ -58,6 +58,8 @@ console.log(ar1);
 ar1[2]=66666;
 console.log(ar1);
 
+//splice
+//array API
 
 
 let ob1={
@@ -90,10 +92,11 @@ funref();
 
 
 
-class Employee{
+class NeoEmployee{
         id;
         ename;
         salary;
+        static company="neosoft"
     // variables
 
         constructor(eid,ename, esalary){
@@ -111,6 +114,8 @@ let emp4=new Employee(45,"hari",679999);
 let emp5=new Employee(45,"hari");
 let emp6=new Employee(45);
 let emp7=new Employee();
+console.log(Employee.pie);
+
 
 // map where store salaries of employees with their id
 let map=new Map()
