@@ -27,7 +27,6 @@ let employees=[
 
 const numsar=new Array(67,78,45,34,23,56,7,8,67);
 const namesar=new Array("hari","pooja","Poonam");
-
 const emparr=new Array(
     {
         id:3455,
@@ -46,9 +45,18 @@ const emparr=new Array(
     }
 )
 
+let ar1=[]; //0
 
+ar1[0]=123;
+ar1[1]=567;   //2
 
+ar1.push(67)
+ar1.push(78);
+ar1.unshift(7777); //5
+console.log(ar1);
 
+ar1[2]=66666;
+console.log(ar1);
 
 
 
@@ -88,10 +96,10 @@ class Employee{
         salary;
     // variables
 
-        constructor(id,name, salary){
-            this.id=id;
-            this.name=name;
-            this.salary=salary;
+        constructor(eid,ename, esalary){
+            this.id=eid;
+            this.name=ename;
+            this.salary=esalary;
         }
 
 }
