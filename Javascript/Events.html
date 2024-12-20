@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dialogbtn{
+            padding: 20px;
+            border-radius: 20px;
+            background: linear-gradient(purple, lightgray);
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="dialogbtn" onclick="showAlert()">SHOW ALERT</button>
+    <button type="button" class="dialogbtn" onclick="getConfirmation()">SUBMIT EXAM</button>
+    <script>
+        function showAlert(){
+            window.alert("Hurry up!!!! sale ending soon.....")
+        }
+        function getConfirmation(){
+            const b=window.confirm("Do you really want to submit????")
+            if(b)
+                window.alert("SUBMITTED....")
+        }
+    </script>
+</body>
+</html>
