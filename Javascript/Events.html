@@ -15,14 +15,28 @@
 <body>
     <button type="button" class="dialogbtn" onclick="showAlert()">SHOW ALERT</button>
     <button type="button" class="dialogbtn" onclick="getConfirmation()">SUBMIT EXAM</button>
+    <button type="button" class="dialogbtn" onclick="setStyle()">SET BACKGROUND</button>
     <script>
         function showAlert(){
             window.alert("Hurry up!!!! sale ending soon.....")
         }
         function getConfirmation(){
             const b=window.confirm("Do you really want to submit????")
+            //true : confirmed the action, false : rejected the action
             if(b)
                 window.alert("SUBMITTED....")
+        }
+        function setStyle(){
+            const bgcolor=window.prompt("input the color");
+            console.log(bgcolor);
+            console.log(typeof bgcolor);
+            
+            document.body.style.backgroundColor=bgcolor;
+            // document : predefined object,
+            // body : predefined element object
+            // style: predefined property
+            //backgroundColor : css property in camelcase
+            // bgcolor: value of css property / variable having css property value
         }
     </script>
 </body>
