@@ -1,15 +1,16 @@
 // camel case, noun, plural form
 // dynamic: no fix size, they can grow
+// direct declation
 const nums=[56,78,356,789,456,88];
 const names=["pooja",'pritam','kaveri','reema','isha']
-const arr=[12, 'hari',5678.789, true, 34, "om"]
+const arr=[12, 'hari',5678.789, true, 34, "om"];
+
 let employees=[
     {
         id:3455,
         ename:"hari",
         bsalary:56788
     },
-
     {
         id:678,
         ename:"hari",
@@ -22,6 +23,28 @@ let employees=[
     }
 ]
 
+// array declaration with new keyword
+
+const numsar=new Array(67,78,45,34,23,56,7,8,67);
+const namesar=new Array("hari","pooja","Poonam");
+
+const emparr=new Array(
+    {
+        id:3455,
+        ename:"hari",
+        bsalary:56788
+    },
+    {
+        id:678,
+        ename:"hari",
+        bsalary:56788
+    },
+    {
+        id:455,
+        ename:"hari",
+        bsalary:56788
+    }
+)
 
 
 
@@ -43,6 +66,19 @@ let ob2={
 console.log(ob1.id);
 console.log(ob1.ename);
 console.log(ob1.bsalary);
+
+let test=function(){
+    console.log("this is a funciton");
+    
+}
+let testarr=[test];
+let funref=testarr[0];
+funref();
+
+
+
+
+
 
 
 
