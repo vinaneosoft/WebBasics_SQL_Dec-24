@@ -16,3 +16,37 @@ function validateEmployeeName(){
    
 }
 
+// mobile : textfield
+// required, pattern validation, length  validation, 
+const mobileNode=document.getElementById("mobile");
+const mobileErrorNode=document.getElementById("mobileError");
+mobileNode.addEventListener("keyup", ()=>validateMobile())
+const mobilePattern=new RegExp("^[0-9]*$")
+
+function validateMobile(){
+    mobileErrorNode.textContent="";
+    // required validation
+    const mobile=mobileNode.value;
+    if(mobile=="")
+        mobileErrorNode.textContent="mobile number is required";    
+    else if(mobilePattern.test(mobile)==false)
+        mobileErrorNode.textContent="Please enter valid mobile number";   
+    else if(empname.length<10 || empname.length>10) 
+        mobileErrorNode.textContent="please enter 10 digit mobile number";    
+   
+}
+// emailid : email
+// required, pattern validation
+
+// age : number
+// required, 20 to 40 allowed, 
+
+// username : text
+// required
+
+// password : password
+// required, pattern validation
+
+// confirmpassword : password
+// required ,  passvalue!=confirmpassvalue
+
