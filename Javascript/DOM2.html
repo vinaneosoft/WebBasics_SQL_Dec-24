@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attribute Demo</title>
+    <style>
+        figure{
+            height: 400px;
+        }
+        figure #flowerimage{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <figure>
         <img id="flowerimage" src="https://th.bing.com/th/id/OIP.jKu8_ESPF7zrC7JoLd5xHwHaFj?rs=1&pid=ImgDetMain"
      alt="flower 1">
-     <figcaption>flower 1</figcaption>
+     <figcaption id="imageLabel">flower 1</figcaption>
     </figure>
 
      <script>
+        const imageNode=document.getElementById("flowerimage");
+        const labelNode=document.getElementById("imageLabel");
         const images=[
             {
                 imgPath:    "https://th.bing.com/th/id/OIP.qLWnwSi-Vae0aZ_oP5-zzQHaFl?rs=1&pid=ImgDetMain" ,
@@ -23,7 +34,7 @@
                 imgName:'flower 3'
             },
             {
-                imgPath:  "https://jooinn.com/images/spring-flower-1.jpg" ,
+                imgPath:  "https://wallup.net/wp-content/uploads/2019/10/309991-tulips-many-flowers.jpg" ,
                 imgName:'flower 4'
             },
             {
@@ -31,6 +42,18 @@
                 imgName:'flower 1'
             }
         ]
+
+        let i=0;
+        window.setInterval(()=>slideShow(),2000);
+        function slideShow(){
+            console.log(i);
+            imageNode.src=images[i].imgPath;
+            imageNode.alt=images[i].imgName
+            labelNode.textContent=images[i].imgName;
+            i++;
+            if(i==images.length) // 4==4
+                i=0;
+        }
      </script>
 </body>
 </html>
