@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM1</title>
+    <style>
+        .spacing{
+            margin: 10px;
+            padding: 10px;
+        }
+        .borderStyle{
+            border: 6px double;
+            border-radius: 20px;
+        }
+    </style>
 </head>
-<body>
+<body class="borderStyle">
+    <button onclick="document.body.classList.add('spacing')">add spacing</button>
+    <!-- comment-->
     <h3>TECHNICAL FRONT END COURSES</h3>
     <ol>
         <li id="web">Web Basics</li>
@@ -15,5 +27,13 @@
         <li class="framework">TailwindCSS</li>
         <li class="framework">BootStrap</li>
     </ol>
+    <script>
+        document.title="Document Object Model"
+        document.bgColor="lightgray"
+        document.body.style.color="blue"
+        document.body.style.fontSize="18px"
+        document.body.style.cssText="text-transform:uppercase; text-align:center"
+        // new class in classList
+    </script>
 </body>
 </html>
