@@ -16,7 +16,17 @@
     <button type="button" class="dialogbtn" onclick="showAlert()">SHOW ALERT</button>
     <button type="button" class="dialogbtn" onclick="getConfirmation()">SUBMIT EXAM</button>
     <button type="button" class="dialogbtn" onclick="setStyle()">SET BACKGROUND</button>
-    <script>
+   <hr>
+   <div>
+    <label for="company">Enter company Name:</label>
+    <input type="text" name="cm" id="company" onfocus="changeStyle()"  onblur="changeStyle()">
+   </div>
+   <br>
+   <div>
+    <label for="clocation">Enter company location:</label>
+    <input type="text" name="loc" id="clocation" onfocus="changeStyle()"  onblur="changeStyle()"> 
+   </div>
+   <script>
         function showAlert(){
             window.alert("Hurry up!!!! sale ending soon.....")
         }
@@ -30,13 +40,27 @@
             const bgcolor=window.prompt("input the color");
             console.log(bgcolor);
             console.log(typeof bgcolor);
-            
             document.body.style.backgroundColor=bgcolor;
             // document : predefined object,
             // body : predefined element object
             // style: predefined property
             //backgroundColor : css property in camelcase
             // bgcolor: value of css property / variable having css property value
+        }
+
+        const changeStyle=function(){
+           /*  const ele=document.getElementById("company");
+            ele.style.border="5px solid blue" */
+            console.log(event);
+            const ele2=event.target;
+            if(event.type=="focus"){
+                ele2.style.border="5px dashed blue"
+                ele2.style.background="lightgray"
+            }
+            if(event.type=="blur"){
+                ele2.style="";
+            }
+            // one line, class
         }
     </script>
 </body>
