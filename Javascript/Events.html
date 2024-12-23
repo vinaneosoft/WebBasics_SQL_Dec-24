@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Events Demo</title>
     <style>
         .dialogbtn{
             padding: 20px;
@@ -26,6 +26,16 @@
     <label for="clocation">Enter company location:</label>
     <input type="text" name="loc" id="clocation" onfocus="changeStyle()"  onblur="changeStyle()"> 
    </div>
+   <hr>
+   <fieldset>
+        <label>Select Technical Courses to Enroll:</label><br><br>
+        <input type="checkbox" id="course1" name="techcourses" value="web basics" onchange="collectCourses()" checked required>
+        <label for="course1">Web Basics</label> 
+        <input type="checkbox" id="course2" name="techcourses" value="sql" onchange="collectCourses()">
+        <label for="course2">SQL</label> 
+        <input type="checkbox" id="course3" name="techcourses" value="angular" onchange="collectCourses()">
+        <label for="course3">ANGULAR</label>
+    </fieldset>
    <script>
         function showAlert(){
             window.alert("Hurry up!!!! sale ending soon.....")
@@ -61,6 +71,10 @@
                 ele2.style="";
             }
             // one line, class
+        }
+
+        const collectCourses=function(){
+
         }
     </script>
 </body>

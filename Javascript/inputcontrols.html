@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        [name="empname"]{
+            background-color: yellow;
+        }
+        #labelta{
+          line-height: 0%;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Online Course Registration Form</h2>
+    <h3>Neosoft Employees</h3>
+    <form action="./ListDemo.html">
+       <fieldset>
+            <label>Name:</label>
+            <input placeholder="firstname" title="firstname is required" class="cc" id="firstname" name="empname" required /> <!-- type="text" is default-->
+            <input placeholder="middlename"  class="cc"  id="middlename" title="middle name" name="empname" type="text"/>
+            <input id="lastname" type="text" class="cc"  placeholder="lastname" name="empname" value="pp"/>
+       </fieldset>
+       <fieldset>
+            <label for="age">Age:</label><input type="number" min="15" max="40" title="age must be within 15 to 40" id="age" name="age" required><br><br>
+            <!-- title will get added in validation messages of browser coming for pattern-->
+            <label for="mobile">Mobile Number:</label><input title="only digits allowed" type="text" minlength="10" maxlength="10" pattern="[0-9]*" id="mobile" name="mobile"><br><br>
+            <label for="mailid">Email Id:</label><input type="email" id="mailid" name="mailid" ><br><br>
+            <label for="birthdate">Birth Date:</label><input type="datetime-local" id="birthdate" name="birthdate"><br><br>
+       </fieldset>
+       <fieldset>
+            <label for="joindate">Date of Joining:</label><input type="date" id="joindate" name="joiningdate">
+            <label for="deparmentdropdown">Select Department:</label>
+            <select id="deparmentdropdown">
+                <option value="data science">DATA SCIENCE</option>
+                <option value="java">JAVA</option>
+                <option value="dotnet">DOTNET</option>
+                <option value="js">JAVASCRIPT</option>
+            </select>
+        </fieldset>
+       <fieldset>
+            <label for="username">Set Username:</label><input type="text" id="username" name="uname"><br><br>
+            <label for="pass">Set Password:</label><input type="text" title="atleast one cap alph, small alph, digit, symbol (@!#$%&?). length 5 to 12" id="pass" name="password" pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[@!#$%&?])[a-zA-Z\d@!#$%&?]{5,12}$"><br><br>
+            <label for="cpass">Confirm Password:</label><input type="password" id="cpass" name="password"><br><br>
+       </fieldset>
+       <fieldset>
+            <label>Select Technical Courses to Enroll:</label><br><br>
+            <input type="checkbox" id="course1" name="techcourses" value="web basics" checked required>
+            <label for="course1">Web Basics</label> 
+            <input type="checkbox" id="course2" name="techcourses" value="sql" >
+            <label for="course2">SQL</label> 
+            <input type="checkbox" id="course3" name="techcourses" value="angular" >
+            <label for="course3">ANGULAR</label> <br><br>
+            <datalist id="technicalcourses">
+                <option value="web basics">Web Basics</option>
+                <option value="sql">SQL</option>
+                <option value="angular">ANGULAR</option>
+            </datalist>
+            <label for="course">Select Course : </label>
+            <input type="text" list="technicalcourses" id="course"> 
+       </fieldset>
+       <fieldset>
+            <label>Gender : </label>
+            <input type="radio" name="gender" id="m" value="male"><label for="m">Male</label>
+            <input type="radio" name="gender" id="f" value="female"><label for="f">Female</label>
+            <input type="radio" name="gender" id="o" value="other"><label for="o">Others</label>
+       </fieldset>
+       <fieldset>
+            <span id="labelta"><label for="comment">Extra comment</label></span> <!-- styling-->
+            <textarea id="comment" rows="5" cols="30" placeholder="add comments"></textarea>
+       </fieldset>
+       <fieldset >
+           <!--  <button type="submit">SUBMIT</button>  -->
+            <input type="submit" value="ENROLL"> 
+            <input type="image" src="https://th.bing.com/th/id/OIP.NGlXkbBkXLkhd9PGqGRjSQHaFj?rs=1&pid=ImgDetMain" height="50" width="100" alt="ENROLL">
+            <input type="reset" >
+       </fieldset>
+       <!-- create new group of checkboxes for nontechnical courses to enroll -->
+        <!-- type = radio id unique name : common value -->
+    </form>
+
+</body>
+</html>
