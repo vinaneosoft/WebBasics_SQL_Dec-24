@@ -72,9 +72,18 @@
             }
             // one line, class
         }
-
+        let courses=[]; // clear
         const collectCourses=function(){
-
+            const checkNodes=document.getElementsByName("techcourses");
+            console.log(checkNodes); //NodeList(3)
+            courses=[];
+            checkNodes.forEach(checkbox=>{
+                    if(checkbox.checked){
+                        courses.push(checkbox.value)
+                    }
+                }
+            ) 
+            console.log(courses);
         }
     </script>
 </body>
