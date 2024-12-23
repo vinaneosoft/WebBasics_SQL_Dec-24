@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CRUD</title>
 </head>
 <body>
-    <article>
+    <article id="coursearticle">
         <header id="top">
             <h2>TECHNICAL COURSES</h2>
         </header>
-
-
+        <ol>
+            <li>JAVA</li>
+        </ol>
         <footer id="bottom">
-            article footer
+            <b>article footer</b>
         </footer>
     </article>
-
     <script>
-        // 
+        // childs
+        const artNode=document.getElementById("coursearticle");
+        console.log(artNode.children);    // direct childs
+        //console.log(artNode.childNodes);   // childs+auxilary text nodes
+        console.log(artNode.children.length);
+        console.log(artNode.innerHTML);
+        console.log(artNode.children[0]);
+        console.log(artNode.children[1]);
+        // how to style first and last child
+        const lastIndex=artNode.children.length-1;
+        artNode.children[0].style.backgroundColor="gray"
+        artNode.children[lastIndex].style.backgroundColor="purple"
+        //console.log(document.body.innerHTML);
     </script>
 </body>
 </html>
