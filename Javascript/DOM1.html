@@ -13,6 +13,9 @@
             border: 6px double;
             border-radius: 20px;
         }
+        ol li{
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="borderStyle">
@@ -27,6 +30,7 @@
         <li class="framework">TailwindCSS</li>
         <li class="framework">BootStrap</li>
     </ol>
+    <b class="framework">bootstrap5.3</b>
     <script>
         document.title="Document Object Model"
         document.bgColor="lightgray"
@@ -34,6 +38,23 @@
         document.body.style.fontSize="18px"
         document.body.style.cssText="text-transform:uppercase; text-align:center"
         // new class in classList
+
+        // tag
+        const liNodes=document.getElementsByTagName("li");
+        console.log(liNodes); //HTMLCollection(6) 
+        for(let listItem of liNodes){
+            listItem.style.color="purple"
+        }
+        // class
+        const elements=document.getElementsByClassName("framework");
+        console.log(elements);
+        for(let listItem of elements){
+            listItem.style.color="red"
+        }
+        const listItem=document.getElementById("web")
+        listItem.style.fontStyle='italic'
+        console.log(listItem.textContent);
+        listItem.textContent="Web Fundamentals(HTML, CSS, JS)" //
     </script>
 </body>
 </html>
