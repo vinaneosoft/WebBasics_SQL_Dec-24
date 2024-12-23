@@ -4,26 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>innerText, innerHTML</title>
+    <style>
+       /*  .container{
+            display: flex;
+        }
+        #para1, #para2{
+            height: 200px;
+            border: 2px solid red;
+            flex-basis: 30%;
+        }  */
+    </style>
 </head>
 <body > 
-    <p id="para1">
-        <span>India is my country</span>
-        India is my country
-        <b>India is my country</b>
-        <i>India is my country <b>I love my country</b></i>
-        <input type="number" placeholder="enter ur age" id="age">
-    </p>
-
+    <div class="container">
+        <p id="para1" >
+            <span>India is my country</span>
+            India is my country
+            <b>India is my country</b>
+            <i>India is my country <b>I love my country</b></i>
+            <br><br>
+            <input type="number" placeholder="enter ur age" id="age">
+        </p>
+        <button type="button" onclick="setHtml()">=></button>
+        <p  id="para2">
+            these contents will be replaced with new contents
+        </p>
+    </div>
     <script>
         const pnode1=document.getElementById("para1");
+        const pnode2=document.getElementById("para2");
         console.log(pnode1);
         console.log(pnode1.innerText);
         console.log(pnode1.textContent);
         console.log(pnode1.innerHTML);
         const ageNode=document.getElementById("age");
         ageNode.addEventListener("keyup", ()=> console.log(ageNode.value))
-       
-        
+
+        function setHtml(){
+           // pnode2.innerHTML=pnode1.innerHTML
+          // pnode2.innerText=pnode1.innerText;
+          pnode2.innerHTML="<b>"+pnode1.innerText+"</b>";
+          //pnode2.innerText="<b>"+pnode1.innerText+"</b>";
+         // pnode2.innerText=pnode1.innerHTML
+         /*good approach is below*/
+            // createEelement - b
+            // textContent
+            // pnode2.append(bnode)
+
+        }
     </script>
 </body>
 </html>
