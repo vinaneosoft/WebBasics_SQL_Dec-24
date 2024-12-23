@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
+    <style>
+        .items{
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <article id="coursearticle">
         <header id="top">
             <h2>TECHNICAL COURSES</h2>
         </header>
-        <ol>
-            <li>JAVA</li>
-        </ol>
+       
         <footer id="bottom">
             <b>article footer</b>
         </footer>
     </article>
     <script>
+        /*R*/
         // childs
         const artNode=document.getElementById("coursearticle");
         console.log(artNode.children);    // direct childs
@@ -31,6 +35,21 @@
         artNode.children[0].style.backgroundColor="gray"
         artNode.children[lastIndex].style.backgroundColor="purple"
         //console.log(document.body.innerHTML);
+        /*C*/
+        const courses=['JAVA', 'NODE','Python','GraphQL','SQL']
+        const coursesOL=document.createElement("ol");
+        coursesOL.type="A";
+
+        courses.forEach((course)=>{
+            const listItem=document.createElement("li");
+           // listItem.setAttribute("class","items");
+           // listItem.setAttribute("class","items2");
+            listItem.classList.add("items","olitems")
+            listItem.textContent=course   // U
+            coursesOL.append(listItem);  // parent.append(child) // U
+        })
+        document.getElementById("top").after(coursesOL);
+       // document.getElementById("bottom").before(coursesOL); // sibling1.before(sibling2)
     </script>
 </body>
 </html>
