@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText, innerHTML</title>
+</head>
+<body > 
+    <p id="para1">
+        <span>India is my country</span>
+        India is my country
+        <b>India is my country</b>
+        <i>India is my country <b>I love my country</b></i>
+        <input type="number" placeholder="enter ur age" id="age">
+    </p>
+
+    <script>
+        const pnode1=document.getElementById("para1");
+        console.log(pnode1);
+        console.log(pnode1.innerText);
+        console.log(pnode1.textContent);
+        console.log(pnode1.innerHTML);
+        const ageNode=document.getElementById("age");
+        ageNode.addEventListener("keyup", ()=> console.log(ageNode.value))
+       
+        
+    </script>
+</body>
+</html>
