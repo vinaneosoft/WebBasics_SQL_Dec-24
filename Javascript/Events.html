@@ -36,6 +36,9 @@
         <input type="checkbox" id="course3" name="techcourses" value="angular" onchange="collectCourses()">
         <label for="course3">ANGULAR</label>
     </fieldset>
+    <textarea onselect="test()">
+        dhsdfkjshfjdglkfjlkfglhj
+    </textarea>
    <script>
         function showAlert(){
             window.alert("Hurry up!!!! sale ending soon.....")
@@ -74,16 +77,22 @@
         }
         let courses=[]; // clear
         const collectCourses=function(){
-            const checkNodes=document.getElementsByName("techcourses");
+            const checkNodes=document.getElementsByName("techcourses"); // dom method
             console.log(checkNodes); //NodeList(3)
             courses=[];
             checkNodes.forEach(checkbox=>{
-                    if(checkbox.checked){
-                        courses.push(checkbox.value)
+                    if(checkbox.checked){  //ele.attribute
+                        courses.push(checkbox.value)  // ele.attribute
                     }
                 }
             ) 
             console.log(courses);
+            // change event : checkbox, radio buttons, select tag
+            // select event : textfield, text area, 
+        }
+        function test(){
+            console.log("select event");
+            
         }
     </script>
 </body>
