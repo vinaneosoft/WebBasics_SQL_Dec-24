@@ -46,10 +46,17 @@
            // listItem.setAttribute("class","items2");
             listItem.classList.add("items","olitems")
             listItem.textContent=course   // U
-            coursesOL.append(listItem);  // parent.append(child) // U
+          //  coursesOL.appendChild(listItem);  // parent.append(child) // U
+            coursesOL.append(listItem);
         })
         document.getElementById("top").after(coursesOL);
        // document.getElementById("bottom").before(coursesOL); // sibling1.before(sibling2)
+   
+         /* D */
+    const footerNode=document.getElementById("bottom");
+    //artNode.removeChild(footerNode); // parent. removeChild(child);
+    footerNode.remove() // ele.remove()
+
     </script>
 </body>
 </html>
