@@ -63,8 +63,19 @@ console.log(account1['accountType']);
 console.log(account1['balance']);
 // all keys : for in
 console.log("------key iteration on object (keys must not be private)-----");
+
 for(let key in account1){
     console.log(key);
     console.log(account1[key]);
 }
 
+let nums=[56,78,90,,5,6,7,,88,8, ];
+for (let num in nums){
+    //console.log(num);
+    console.log(nums[num]+"=>"+num)
+}
+
+for (let i=0;i<nums.length;i++){
+    //console.log(num);
+    console.log(nums[i]+"=>"+i)
+}
