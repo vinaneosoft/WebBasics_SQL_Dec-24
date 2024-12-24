@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            height: 100px;
+            width: 100px;
+            background: lightskyblue;
+            border: darkblue 3px solid;
+            transition: 2s;
+        }   
+        /* #block1:hover{
+            transform: rotate(360deg);
+        } */
+    </style>
+</head>
+<body>
+    <div class="block" id="block1">
+        India is my country
+    </div>
+
+    <script>
+        const block1=document.getElementById("block1");
+        let angle=360;
+        //window.setTimeout(()=>rotateBlock(), 2000);
+        window.setInterval(()=>rotateBlock(), 2000);
+        function rotateBlock(){
+            console.log("in function");
+            block1.style.transform=`rotate(${angle}deg)`
+            angle=angle+360;
+        }
+    </script>
+</body>
+</html>
