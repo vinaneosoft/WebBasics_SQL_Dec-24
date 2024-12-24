@@ -6,6 +6,26 @@
     <title>Datalist</title>
 </head>
 <body>
-    
+    <!-- datalist selected course : to add in array on button click			-->
+    <datalist id="frontendcourses">
+        <option value="web basics">WEB BASICS</option>
+        <option value="angular">Angular</option>
+        <option value="react">React</option>
+        <option value="bootstrap">Bootstrap</option>
+    </datalist>
+    <input type="text" list="frontendcourses" name="cs" id="course" placeholder="select course to enroll">
+    <button type="button" onclick="collectCourses()">ADD</button>
+    <script>
+        const courseArray=[];
+        const courseNode=document.getElementById("course");
+        function collectCourses(){
+            let b=courseArray.includes(courseNode.value)
+            console.log(b);
+            if(b==false)
+                courseArray.push(courseNode.value);
+            console.log(courseArray);
+            
+        }
+    </script>
 </body>
 </html>
