@@ -10,7 +10,7 @@
             width: 100px;
             background: lightskyblue;
             border: darkblue 3px solid;
-            transition: 2s;
+            transition: 3s;
         }   
         /* #block1:hover{
             transform: rotate(360deg);
@@ -26,11 +26,11 @@
         const block1=document.getElementById("block1");
         let angle=360;
         //window.setTimeout(()=>rotateBlock(), 2000);
-        window.setInterval(()=>rotateBlock(), 2000);
+        window.setInterval(()=>rotateBlock(), 3000);
         function rotateBlock(){
             console.log("in function");
             block1.style.transform=`rotate(${angle}deg)`
-            angle=angle+360;
+            angle=-angle;
         }
     </script>
 </body>
