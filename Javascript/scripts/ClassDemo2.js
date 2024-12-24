@@ -1,18 +1,10 @@
 /* capticalcase */
 class BankAccount{
-    // instance variables
-    // instance methods
-    accountNumber; balance; accountType; 
-
-    /*A class may only have one constructor */
-  /*   constructor(){
-        console.log("in constru");
-    } */
-    constructor(balance=0,accType="savings",accNum=111){
-        console.log("in constru");
-        this.accountNumber=accNum;
+    constructor(balance=0,accountType="savings",accountNumber=111){
+        console.log("in constructor");
+        this.accountNumber=accountNumber;
         this.balance=balance;
-        this.accountType=accType;
+        this.accountType=accountType; 
     }
 }
 
