@@ -6,34 +6,59 @@
     <title>Registration Form</title>
     <style>
         .error{
-            color:red;
+            color: red;
         }
     </style>
 </head>
 <body>
     <h2>Online Course Registration Form</h2>
-    <form novalidate>
-        <fieldset>
-            <table>
-                <tr>
-                    <td><label for="firstname">Enter your Name:</label></td>
-                    <td><input type="text" id="firstname" name="empname" required /></td>
-                </tr>
-                <tr><td></td><td class="error" id="nameError"></td></tr>
-                <tr>
-                    <td><label for="mobile">Enter your mobile:</label></td>
-                    <td><input type="text" id="mobile" name="mobile" required /></td>
-                </tr>
-                <tr><td></td><td class="error" id="mobileError"></td></tr>
-            </table>
-        </fieldset>
-        <fieldset >
-            <table>
-                <tr><td> <input type="submit" value="ENROLL"> 
-                    <input type="reset" ></td></tr>
-            </table>
-        </fieldset>
-    </form>
-    <script src="./scripts/Validation.js"></script>
+    <form novalidate onsubmit="return validateAll()" action="Success.html">
+    <fieldset>
+        <table>
+            <tr>
+                <td><label for="firstname">Name:</label><td><input type="text" id="firstname" name="empname" required></td></td>
+            </tr>
+            <tr>
+                <td><td class="error" id="nameError"></td></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Enter your mobile:</label></td>
+                <td><input type="text" id="mobile" name="mobile" required /></td>
+            </tr>
+            <tr><td></td><td class="error" id="mobileError"></td></tr>
+            <tr>
+                <td> <label for="email">Email:</label></td>
+                <td> <input type="email" id="email" name="email"></td>
+           </tr>
+           <tr><td></td><td class="error" id="emailerror"></td></tr>
+           <tr>
+            <td><label for="age">Age:</label> </td>
+            <td><input type="number" title="Age must be between 20 and 40" id="age" name="age"></td>
+           </tr>
+           <tr><td></td><td class="error" id="ageerror"></td></tr>
+           <tr>
+            <td><label for="password">Set Password:</label></td>
+            <td><input type="password" title="" id="password" name="password"></td>
+           </tr>
+           <tr><td></td><td class="error" id="passworderror"></td></tr>
+           <tr>
+            <td><label for="password">Confirm Password:</label> </td>
+            <td><input type="password" id="Confirmpassword" title="atleast one capital alphabet, small alpha,digit, special symbol(@!#$%&?) and length 5 to 10 charcters" name="password"></td>
+           </tr>
+           <tr><td></td><td class="error" id="confirmpassworderror"></td></tr>
+
+        </table>
+    </fieldset>
+    <fieldset>
+        <table>
+            <tr>
+                <td><input type="submit" value="SUBMIT">
+                    <input type="reset" value="RESET"></td>
+            </tr>
+            
+        </table>
+    </fieldset>
+</form>
+<script src="./scripts/validation.js"></script>
 </body>
 </html>
