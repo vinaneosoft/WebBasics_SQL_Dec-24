@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <style>
+        .items{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <article id="coursearticle">
+        <header id="top">
+            <h2>TECHNICAL COURSES</h2>
+        </header>
+       
+        <footer id="bottom">
+            <b>article footer</b>
+        </footer>
+    </article>
+    <script>
+        /*C*/
+        const courses=['JAVA', 'NODE','Python','GraphQL','SQL']
+        const coursesOL=document.createElement("ol");
+        coursesOL.type="A";
+        courses.forEach((course)=>{
+            const listItem=document.createElement("li");
+           // listItem.setAttribute("class","items");
+           // listItem.setAttribute("class","items2");
+            listItem.classList.add("items","olitems")
+            listItem.textContent=course   // U
+          //  coursesOL.appendChild(listItem);  // parent.append(child) // U
+            coursesOL.append(listItem);
+        })
+        document.getElementById("top").after(coursesOL);
+    </script>
+</body>
+</html>
