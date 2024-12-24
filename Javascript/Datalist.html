@@ -19,12 +19,9 @@
         const courseArray=[];
         const courseNode=document.getElementById("course");
         function collectCourses(){
-            let b=courseArray.includes(courseNode.value)
-            console.log(b);
-            if(b==false)
+            if(!courseArray.includes(courseNode.value))
                 courseArray.push(courseNode.value);
             console.log(courseArray);
-            
         }
     </script>
 </body>
