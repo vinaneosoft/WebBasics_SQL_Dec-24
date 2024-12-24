@@ -19,6 +19,12 @@ class BankAccount{
     get actype(){
         return this.#accountType
     }
+    get accNum(){
+        return this.#accountNumber;
+    }
+    set accNum(accountNumber){
+        this.#accountNumber=accountNumber;
+    }
 
     deposit(amount){
         console.log("in deposit");
@@ -66,3 +72,15 @@ account3.withdraw(50000);
 console.log(account3.bal);
 
 account4.deposit(56788);
+
+
+console.log(account1.accNum);
+console.log(account1.actype);
+console.log(account1.bal);
+// all keys : for in
+console.log("-----------");
+
+for(let key in account1)
+    {
+    console.log(key);
+}
