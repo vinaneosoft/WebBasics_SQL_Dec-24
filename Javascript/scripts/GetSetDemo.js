@@ -20,6 +20,21 @@ class BankAccount{
         return this.#accountType
     }
 
+    deposit(amount){
+        console.log("in deposit");
+        
+        this.#balance=this.#balance+amount;
+        return this.#balance
+    }
+    withdraw(amount){
+        if(amount<=this.#balance)
+            this.#balance=this.#balance-amount;
+        else
+            throw new Error("Insufficient balance");
+        return this.#balance
+    }
+
+
 }// end 
 
 const account1=new BankAccount(); // def constructor
@@ -39,3 +54,15 @@ console.log(account2);
 console.log(account2.bal);
 
 //console.log(account2.#accountType);
+console.log(account4.bal);
+account4.deposit(1000);
+console.log(account4.bal);
+console.log(account3.bal);
+try{
+account3.withdraw(50000);
+}catch(error){
+    console.log(error);
+}
+console.log(account3.bal);
+
+account4.deposit(56788);
