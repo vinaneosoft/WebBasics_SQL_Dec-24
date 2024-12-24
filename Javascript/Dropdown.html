@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+    <title>Create Dropdown</title>
     <style>
         .items{
             text-decoration: underline;
@@ -23,18 +23,17 @@
     <script>
         /*C*/
         const courses=['JAVA', 'NODE','Python','GraphQL','SQL']
-        const coursesOL=document.createElement("ol");
-        coursesOL.type="A";
+        const coursesselect=document.createElement("select");
+        coursesselect.id="coursedropdown";
+        coursesselect.title ="select course from dropdown";
         courses.forEach((course)=>{
-            const listItem=document.createElement("li");
-           // listItem.setAttribute("class","items");
-           // listItem.setAttribute("class","items2");
-            listItem.classList.add("items","olitems")
-            listItem.textContent=course   // U
-          //  coursesOL.appendChild(listItem);  // parent.append(child) // U
-            coursesOL.append(listItem);
+            const optionNode=document.createElement("option");
+            optionNode.classList.add("items","dropdownlitems")
+            optionNode.value=course.toLowerCase();
+            optionNode.textContent=course   // U
+            coursesselect.append(optionNode);
         })
-        document.getElementById("top").after(coursesOL);
+        document.getElementById("top").after(coursesselect);
     </script>
 </body>
 </html>
