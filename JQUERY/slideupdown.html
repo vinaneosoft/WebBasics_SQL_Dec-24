@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDE SHOW</title>
+    <style>
+        img{
+           width: 400px;
+           height: 400px;
+        }
+        button{
+            padding:20px;
+            background: radial-gradient(pink, yellow);
+        }
+      /*   #sunset2{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <button type="button" id="effectbtn">SLIDE UP</button>
+    <button  type="button" id="togglebtn">SLIDE TOGGLE (up/down)</button>
+    <figure id="sunset1">
+        <img src="https://wallpapercave.com/wp/3klnmq2.jpg" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    <figure id="sunset2">
+        <img src="https://th.bing.com/th/id/OIP.WdO4GO_Lub29TGz12-UUSgHaEo?rs=1&pid=ImgDetMain" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    <p>
+        this will get repositioned
+    </p>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        $("#effectbtn").click(function(){
+           if($("#effectbtn").text()=="SLIDE UP"){
+                $("#sunset1").slideUp(800, function(){
+                    $("#sunset2").slideUp(500, function(){
+                        alert("all slideup operations completed..");
+                        $("#effectbtn").text("SLIDE DOWN");
+                    });
+                });
+            }
+            else{
+                $("#sunset1").slideDown(1000, function(){
+                    $("#sunset2").slideDown(700, function(){
+                        alert("all slidedown operations completed..");
+                        $("#effectbtn").text("SLIDE UP");
+                    });
+                });
+            }
+        });
+        $("#togglebtn").click(function(){
+            $("#sunset1").slideToggle(800, function(){
+                    $("#sunset2").slideToggle(500, function(){
+                        alert("toggle completed..");
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

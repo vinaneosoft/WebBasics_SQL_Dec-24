@@ -19,6 +19,12 @@
     </style>
 </head>
 <body>
+    <p class="fade">
+        this will get faded
+    </p>
+    <p class="fade">
+        this will get faded
+    </p>
     <button type="button" id="effectbtn">FADE OUT</button>
     <button  type="button" id="togglebtn">FADE TOGGLE (out/in)</button>
     <figure id="sunset1">
@@ -29,9 +35,7 @@
         <img src="https://th.bing.com/th/id/OIP.WdO4GO_Lub29TGz12-UUSgHaEo?rs=1&pid=ImgDetMain" alt="sunset">
         <figcaption>SUNSET</figcaption>
     </figure>
-    <p>
-        this will get repositioned
-    </p>
+  
     <script src="./scripts/jquery-3.7.1.min.js"></script>
     <script>
         $("#effectbtn").click(function(){
@@ -53,8 +57,6 @@
             }
             
         });
-
-       
        
         $("#togglebtn").click(function(){
             $("#sunset1").fadeToggle(800, function(){
@@ -62,6 +64,16 @@
                         alert("toggle completed..");
                     });
             });
+        });
+
+        $(".fade").mouseover(function(){ // event function
+            console.log(this);
+            $(this).fadeTo(3000,0.4) // effect function
+        });
+        $(".fade").mouseleave(function(){
+            console.log(this);
+           // $(this).fadeIn();  // if ele completed removed then only it will get added via fadeIn
+           $(this).fadeTo(2000,1)
         });
     </script>
 </body>
