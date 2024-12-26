@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            height: 100px;
+            width: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="block" id="block1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+    </div>
+    <br>
+    <div class="block" id="block2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    </div>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        const finalStyle={
+            width:"300px",
+            height:"350px",
+            border: "10px dashed pink", // no effect
+            backgroundColor: "green" ,// no effect
+            borderWidth:"10px"
+        }
+        $("#block1").mouseover(function(){
+           // $(this).animate(finalStyle); // default 400ms, swing
+
+          // $(this).animate(finalStyle, 2000); // default easing: swing
+          //$(this).animate(finalStyle, 2000, "linear" ); // no callback
+          $(this).animate(finalStyle, 2000, "linear", function(){ // effect function
+                $(this).fadeOut(500);
+          });
+        })
+        $("#block2").mouseover(function(){
+            $(this).css(finalStyle); // not effect function
+        })
+    </script>
+</body>
+</html>

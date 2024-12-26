@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaining</title>
+    <style>
+        img{
+            height: 500px;
+            width: 600px;
+        }
+    </style>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("figure").hide(3000).show(1000).fadeOut(2000).fadeIn(600).slideUp(800).slideDown(900);
+        });
+
+        $(function(){
+            $("figure").hide(3000).show(1000).fadeOut(2000).fadeIn(600).slideUp(800).slideDown(900);
+        });
+
+       // $(document).ready(callback)
+       // $(callback)
+    </script>
+</head>
+<body>
+    <figure id="sunset1">
+        <img src="https://wallpapercave.com/wp/3klnmq2.jpg" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    <figure id="sunset2">
+        <img src="https://wallpapercave.com/wp/3klnmq2.jpg" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    
+</body>
+</html>
