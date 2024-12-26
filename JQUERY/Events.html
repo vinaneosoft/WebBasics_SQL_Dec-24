@@ -82,7 +82,8 @@
      console.log("------");
      console.log($("label").attr("for")) // default 1st label's for attribute value
     // $("label").attr("for", "companyName") // all label's  for attribute value getting changed
-    $("#label1").attr("for", "companyName")
+    $("#label1").attr("for", "companyName") // string, number
+    $("#label1").prop("for", "mycompany")  // string, number, boolean
     </script>
 </body>
 </html>
