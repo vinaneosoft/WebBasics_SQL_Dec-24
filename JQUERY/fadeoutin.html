@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadeout Fadein</title>
+    <style>
+        img{
+           width: 400px;
+           height: 400px;
+        }
+        button{
+            padding:20px;
+            background: radial-gradient(pink, yellow);
+        }
+      /*   #sunset2{
+            display: none;
+        } */
+    </style>
+</head>
+<body>
+    <button type="button" id="effectbtn">FADE OUT</button>
+    <button  type="button" id="togglebtn">FADE TOGGLE (out/in)</button>
+    <figure id="sunset1">
+        <img src="https://wallpapercave.com/wp/3klnmq2.jpg" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    <figure id="sunset2">
+        <img src="https://th.bing.com/th/id/OIP.WdO4GO_Lub29TGz12-UUSgHaEo?rs=1&pid=ImgDetMain" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    <p>
+        this will get repositioned
+    </p>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        $("#effectbtn").click(function(){
+           if($("#effectbtn").text()=="FADE OUT"){
+                $("#sunset1").fadeOut(800, function(){
+                    $("#sunset2").fadeOut(500, function(){
+                        alert("all fadeOut operations completed..");
+                        $("#effectbtn").text("FADE IN");
+                    });
+                });
+            }
+            else{
+                $("#sunset1").fadeIn(1000, function(){
+                    $("#sunset2").fadeIn(700, function(){
+                        alert("all fadeIn operations completed..");
+                        $("#effectbtn").text("FADE OUT");
+                    });
+                });
+            }
+            
+        });
+
+       
+       
+        $("#togglebtn").click(function(){
+            $("#sunset1").fadeToggle(800, function(){
+                    $("#sunset2").fadeToggle(500, function(){
+                        alert("toggle completed..");
+                    });
+            });
+        });
+    </script>
+</body>
+</html>
