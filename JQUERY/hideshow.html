@@ -6,17 +6,21 @@
     <title>HIDE SHOW</title>
     <style>
         img{
-            width: 50%;
-            height: 50%;
+           width: 400px;
+           height: 400px;
         }
         button{
             padding:20px;
             background: radial-gradient(pink, yellow);
         }
+      /*   #sunset2{
+            display: none;
+        } */
     </style>
 </head>
 <body>
     <button type="button" id="effectbtn">HIDE</button>
+    <button  type="button" id="togglebtn">TOGGLE (hide/show)</button>
     <figure id="sunset1">
         <img src="https://wallpapercave.com/wp/3klnmq2.jpg" alt="sunset">
         <figcaption>SUNSET</figcaption>
@@ -52,6 +56,21 @@
                 });
             }
             
+        });
+
+        let flag=0;
+        // common callback : toggle, custom callback : hide and show seperate call
+      /*   $("#togglebtn").click(function(){
+            $("figure").toggle(3000, function(){
+                alert("toggle operation completed..");
+            });
+        }); */
+        $("#togglebtn").click(function(){
+            $("#sunset1").toggle(800, function(){
+                    $("#sunset2").toggle(500, function(){
+                        alert("toggle completed..");
+                    });
+            });
         });
     </script>
 </body>
