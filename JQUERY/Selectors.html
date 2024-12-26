@@ -19,11 +19,17 @@
         <li class="oop">PYTHON</li>
         <li id="jsbackend">NODE</li>
     </ol>
-
-
-
-
 <script src="./scripts/jquery-3.7.1.min.js"></script>
+<script>
+    const liElements=$("li");
+    console.log(liElements);
+    //liElements.css("text-decoration", "underline"); // single key value
+    const listyle={
+        textDecoration:'underline',
+        textTransform:'lowercase'
+    }
+    liElements.css(listyle);
+</script>
    
 </body>
 </html>
