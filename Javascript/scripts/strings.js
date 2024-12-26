@@ -87,3 +87,7 @@ console.log("---");
 
 console.log(m1.valueOf()===m2.valueOf());
 
+let ss="india is my country. india, india I love my india. india is country";
+ss.indexOf('india');
+ss.lastIndexOf('india');
+ss.lastIndexOf('i');
