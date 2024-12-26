@@ -14,7 +14,7 @@
 </head>
 <body>
    <div>
-    <label for="company">Enter company Name:</label>
+    <label id="label1" for="company">Enter company Name:</label>
     <input type="text" name="details" id="company">
    </div>
    <br>
@@ -74,8 +74,15 @@
         console.log(courses);
        })
 
-    
-       
+     console.log($("label").html()); // default 1st label's html
+     console.log("------");
+     console.log($("label").text());  // all label's text
+     //console.log($("label").attr());
+     $("label").css("color", "green")// all label's color
+     console.log("------");
+     console.log($("label").attr("for")) // default 1st label's for attribute value
+    // $("label").attr("for", "companyName") // all label's  for attribute value getting changed
+    $("#label1").attr("for", "companyName")
     </script>
 </body>
 </html>
