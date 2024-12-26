@@ -22,9 +22,19 @@
         <li class="oop">PYTHON</li>
         <li id="jsbackend"><b>NODE</b></li>
     </ol>
-    <p id="para">
+    <p id="para" class="pastecontents">
         these contents will be replaced
     </p>
+    <p id="para2" class="pastecontents">
+        these contents will be replaced
+    </p>
+
+
+    <input type="text" value="neosoft" class="ifield">
+    <input type="number" value="2024" class="ifield">
+
+    <ol type="A"></ol>
+
 <script src="./scripts/jquery-3.7.1.min.js"></script>
 <script>
     const liElements=$("li");  // element selector
@@ -49,9 +59,18 @@
    // innerHTML
    console.log($("#jsbackend").html());
    const htmlcontents=$("#jsbackend").html()
-   $("#para").html(htmlcontents)
+   $(".pastecontents").html(htmlcontents)
 
    $("#jsbackend").text("BASICS OF NODE")
+
+   // value
+  const cname= $('[type="text"]').val();  
+  console.log(cname);
+  const year= $('input[type="number"]').val();  
+  console.log(year);
+  // javascript attribute value access or change
+//console.log(document.getElementById("company").type);
+
 </script>
    
 </body>
