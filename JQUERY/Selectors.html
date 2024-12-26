@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectors</title>
+    <style>
+      
+    </style>
 </head>
 <body>
     <h2 class="heading">BACKEND TECHNOLOGIES</h2>
     <h3 class="heading">BACKEND PROGRAMMIG</h3>
-    <ol id="olparent">
+    <ol>
         <li class="oop">CPP</li>
         <li class="oop">JAVA 
-            <ul>
+            <ul id="javatypes">
                 <li>BASIC JAVA</li>
                 <li>ADVANCED JAVA</li>
             </ul>
@@ -21,7 +24,7 @@
     </ol>
 <script src="./scripts/jquery-3.7.1.min.js"></script>
 <script>
-    const liElements=$("li");
+    const liElements=$("li");  // element selector
     console.log(liElements);
     //liElements.css("text-decoration", "underline"); // single key value
     const listyle={
@@ -29,6 +32,15 @@
         textTransform:'lowercase'
     }
     liElements.css(listyle);
+
+    const oopsgroup=$(".oop");  // class selector
+    oopsgroup.css({
+        fontSize:"20px",
+        fontStyle:"italic",
+        "color":"pink"
+    })
+    $('#jsbackend').css("color",'green'); // id selector
+    $("#javatypes>li:first-child").css("color", "darkblue")
 </script>
    
 </body>
