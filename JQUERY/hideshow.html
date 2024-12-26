@@ -6,8 +6,8 @@
     <title>HIDE SHOW</title>
     <style>
         img{
-            width: 100%;
-            height: 100%;
+            width: 50%;
+            height: 50%;
         }
         button{
             padding:20px;
@@ -17,16 +17,23 @@
 </head>
 <body>
     <button type="button" id="effectbtn">HIDE</button>
-  <figure>
-    <img src="https://wallpapercave.com/wp/3klnmq2.jpg" alt="sunset">
-    <figcaption>SUNSET</figcaption>
-  </figure>
-
-
-
-
-
+    <figure>
+        <img src="https://wallpapercave.com/wp/3klnmq2.jpg" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    <figure>
+        <img src="https://th.bing.com/th/id/OIP.WdO4GO_Lub29TGz12-UUSgHaEo?rs=1&pid=ImgDetMain" alt="sunset">
+        <figcaption>SUNSET</figcaption>
+    </figure>
+    <p>
+        this will get repositioned
+    </p>
     <script src="./scripts/jquery-3.7.1.min.js"></script>
-   
+    <script>
+        // selector, event function, effect function, callback
+        $("#effectbtn").click(function(){
+            $("figure").hide(1000) ; // removed with effect
+        });
+    </script>
 </body>
 </html>
