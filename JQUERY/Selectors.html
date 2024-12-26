@@ -20,8 +20,11 @@
             </ul>
         </li>
         <li class="oop">PYTHON</li>
-        <li id="jsbackend">NODE</li>
+        <li id="jsbackend"><b>NODE</b></li>
     </ol>
+    <p id="para">
+        these contents will be replaced
+    </p>
 <script src="./scripts/jquery-3.7.1.min.js"></script>
 <script>
     const liElements=$("li");  // element selector
@@ -41,6 +44,14 @@
     })
     $('#jsbackend').css("color",'green'); // id selector
     $("#javatypes>li:first-child").css("color", "darkblue")
+    // textContent, innerText
+    console.log($("#jsbackend").text());
+   // innerHTML
+   console.log($("#jsbackend").html());
+   const htmlcontents=$("#jsbackend").html()
+   $("#para").html(htmlcontents)
+
+   $("#jsbackend").text("BASICS OF NODE")
 </script>
    
 </body>
