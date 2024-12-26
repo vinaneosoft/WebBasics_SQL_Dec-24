@@ -13,87 +13,69 @@
     </style>
 </head>
 <body>
-    <button type="button" class="dialogbtn" onclick="showAlert()">SHOW ALERT</button>
-    <button type="button" class="dialogbtn" onclick="getConfirmation()">SUBMIT EXAM</button>
-    <button type="button" class="dialogbtn" onclick="setStyle()">SET BACKGROUND</button>
-   <hr>
    <div>
     <label for="company">Enter company Name:</label>
-    <input type="text" name="cm" id="company" onfocus="changeStyle()"  onblur="changeStyle()">
+    <input type="text" name="details" id="company">
    </div>
    <br>
    <div>
     <label for="clocation">Enter company location:</label>
-    <input type="text" name="loc" id="clocation" onfocus="changeStyle()"  onblur="changeStyle()"> 
+    <input type="text" name="details" id="clocation"> 
    </div>
    <hr>
    <fieldset>
         <label>Select Technical Courses to Enroll:</label><br><br>
-        <input type="checkbox" id="course1" name="techcourses" value="web basics" onchange="collectCourses()" checked required>
+        <input type="checkbox" id="course1" name="techcourses" value="web basics">
         <label for="course1">Web Basics</label> 
-        <input type="checkbox" id="course2" name="techcourses" value="sql" onchange="collectCourses()">
+        <input type="checkbox" id="course2" name="techcourses" value="sql" >
         <label for="course2">SQL</label> 
-        <input type="checkbox" id="course3" name="techcourses" value="angular" onchange="collectCourses()">
+        <input type="checkbox" id="course3" name="techcourses" value="angular" >
         <label for="course3">ANGULAR</label>
     </fieldset>
-    <textarea onselect="test()">
-        dhsdfkjshfjdglkfjlkfglhj
-    </textarea>
+    
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
    <script>
-        function showAlert(){
-            window.alert("Hurry up!!!! sale ending soon.....")
-        }
-        function getConfirmation(){
-            const b=window.confirm("Do you really want to submit????")
-            //true : confirmed the action, false : rejected the action
-            if(b)
-                window.alert("SUBMITTED....")
-        }
-        function setStyle(){
-            const bgcolor=window.prompt("input the color");
-            console.log(bgcolor);
-            console.log(typeof bgcolor);
-            document.body.style.backgroundColor=bgcolor;
-            // document : predefined object,
-            // body : predefined element object
-            // style: predefined property
-            //backgroundColor : css property in camelcase
-            // bgcolor: value of css property / variable having css property value
-        }
+       $("[name='details']").focus(function(){
+            $(this).css({
+                border:"5px dashed blue",
+                background:"lightgray"
+            })
+       });
+       $("[name='details']").blur(function(){
+            $(this).css({border:"",background:""});
+       });
 
-        const changeStyle=function(){
-           /*  const ele=document.getElementById("company");
-            ele.style.border="5px solid blue" */
-            console.log(event);
-            const ele2=event.target;
-            if(event.type=="focus"){
-                ele2.style.border="5px dashed blue"
-                ele2.style.background="lightgray"
-            }
-            if(event.type=="blur"){
-                ele2.style="";
-            }
-            // one line, class
+       let courses=[];
+       $('[name="techcourses"]').change(function(){
+        courses=[];
+        if($('#course1').prop("checked"))
+            courses.push($('#course1').val())
+        if($('#course2').prop("checked"))
+            courses.push($('#course2').val())
+        if($('#course3').prop("checked"))
+            courses.push($('#course3').val())
+        console.log(courses);
+       })
+       $('[name="techcourses"]').change(function(){
+        courses=[];
+        for(let i=1;i<=3;i++){
+            if($(`#course${i}`).prop("checked"))
+            courses.push($(`#course${i}`).val())
         }
-        let courses=[]; // clear
-        const collectCourses=function(){
-            const checkNodes=document.getElementsByName("techcourses"); // dom method
-            console.log(checkNodes); //NodeList(3)
-            courses=[];
-            checkNodes.forEach(checkbox=>{
-                    if(checkbox.checked){  //ele.attribute
-                        courses.push(checkbox.value)  // ele.attribute
-                    }
-                }
-            ) 
-            console.log(courses);
-            // change event : checkbox, radio buttons, select tag
-            // select event : textfield, text area, 
-        }
-        function test(){
-            console.log("select event");
-            
-        }
+        console.log(courses);
+       })
+       
+       $('[name="techcourses"]').change(function(){
+        courses=[];
+        $('[name="techcourses"]').each((ind, checkbox)=>{
+            if(checkbox.checked)  // js logic
+                courses.push(checkbox.value)  // js logic
+        })
+        console.log(courses);
+       })
+
+    
+       
     </script>
 </body>
 </html>
