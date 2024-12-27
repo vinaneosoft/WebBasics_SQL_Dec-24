@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Dropdown</title>
+    <style>
+        .items{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <article id="coursearticle">
+        <header id="top">
+            <h2>TECHNICAL COURSES</h2>
+        </header>
+       
+        <footer id="bottom">
+            <b>article footer</b>
+        </footer>
+    </article>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        /*C*/
+        const courses=['JAVA', 'NODE','Python','GraphQL','SQL']
+        const selectNode=document.createElement("select");
+        selectNode.id="coursedropdown";
+        selectNode.title ="select course from dropdown";
+        courses.forEach((course)=>{
+            const optionNode=document.createElement("option");
+            optionNode.classList.add("items","dropdownlitems")
+            optionNode.value=course.toLowerCase();
+            optionNode.textContent=course   
+            selectNode.append(optionNode);
+        })
+        document.getElementById("top").after(selectNode);
+    </script>
+</body>
+</html>
