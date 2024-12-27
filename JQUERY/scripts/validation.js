@@ -143,6 +143,8 @@ function validateConfirmPassword() {
     }
 }
 
+$("#regForm").submit(()=>validateAll())
+
 function validateAll(){
     const r1=validateEmployeeName();
     const r2=validateMobile();
