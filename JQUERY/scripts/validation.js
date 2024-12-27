@@ -1,163 +1,141 @@
-const nameNode = document.getElementById("firstname");
-const nameErrorNode = document.getElementById("nameError");
-nameNode.addEventListener("keyup", () => validateEmployeeName());
+const nameNode = $("#firstname");
+const nameErrorNode = $("#nameError");
+nameNode.on("keyup", () => validateEmployeeName());
 const namePattern = new RegExp("^[A-Ba-z ]*$");
 
 function validateEmployeeName() {
-    nameErrorNode.textContent = "";
-    // required validation
-    const empname = nameNode.value;
+    nameErrorNode.text("");
+    const empname = nameNode.val();
     if (empname == "") {
-        nameErrorNode.textContent = "name is required";
-        nameNode.style.border="3px red solid";
+        nameErrorNode.text("name is required");
+        nameNode.css("border", "3px red solid");
         return false;
     }
     else if (namePattern.test(empname) == false){
-        nameErrorNode.textContent = "Please enter valid name";
-        nameNode.style.border="3px red solid";
+        nameErrorNode.text("Please enter valid name");
+        nameNode.css("border", "3px red solid");
         return false;
     }
     else if (empname.length < 2){
-        nameErrorNode.textContent = "name must be more than 1 character long...";
-        nameNode.style.border="3px red solid";
+        nameErrorNode.text("name must be more than 1 character long...");
+        nameNode.css("border", "3px red solid");
         return false;
     }
     else{
-        nameNode.style.border="3px green solid";
+        nameNode.css("border", "3px green solid");
         return true;
     }
 }
 
-// mobile : textfield
-// required, pattern validation, length  validation,
-const mobileNode = document.getElementById("mobile");
-const mobileErrorNode = document.getElementById("mobileError");
-mobileNode.addEventListener("keyup", () => validateMobile());
+const mobileNode = $("#mobile");
+const mobileErrorNode = $("#mobileError");
+mobileNode.on("keyup", () => validateMobile());
 const mobilePattern = new RegExp("^[0-9]*$");
 
 function validateMobile() {
-  mobileErrorNode.textContent = "";
-  // required validation
-  const mobile = mobileNode.value;
+  mobileErrorNode.text("");
+  const mobile = mobileNode.val();
   if (mobile == "") {
-    mobileErrorNode.textContent = "mobile number is required";
-    mobileNode.style.border="3px red solid";
+    mobileErrorNode.text("mobile number is required");
+    mobileNode.css("border", "3px red solid");
     return false;
   }
   else if (mobilePattern.test(mobile) == false){
-    mobileErrorNode.textContent = "Please enter valid mobile number";
-    mobileNode.style.border="3px red solid";
+    mobileErrorNode.text("Please enter valid mobile number");
+    mobileNode.css("border", "3px red solid");
     return false;
   }
   else if (mobile.length < 10 || mobile.length > 10){
-    mobileErrorNode.textContent = "please enter 10 digit mobile number";
-    mobileNode.style.border="3px red solid";
+    mobileErrorNode.text("please enter 10 digit mobile number");
+    mobileNode.css("border", "3px red solid");
     return false;
   }
   else{
-    mobileNode.style.border="3px green solid";
+    mobileNode.css("border", "3px green solid");
     return true;
   }
 }
 
-// emailid : email
-// required, pattern validation
-const emailNode = document.getElementById("email");
-const emailErrorNode = document.getElementById("emailerror");
-emailNode.addEventListener("keyup", () => validateEmail());
+const emailNode = $("#email");
+const emailErrorNode = $("#emailerror"); 
+emailNode.on("keyup", () => validateEmail());   
 
 function validateEmail() {
-  emailErrorNode.textContent = "";
-    const email = emailNode.value;
+  emailErrorNode.text("");
+    const email = emailNode.val();
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (email == ""){
-        emailErrorNode.textContent = "Email is required";    
-        emailNode.style.border="3px red solid";
+        emailErrorNode.text("Email is required");    
+        emailNode.css("border", "3px red solid");
         return false;
     }   
     else if (!emailPattern.test(email)){
-        emailErrorNode.textContent = "Please enter a valid email";  
-        emailNode.style.border="3px red solid"; 
+        emailErrorNode.text("Please enter a valid email");  
+        emailNode.css("border", "3px red solid"); 
         return false;
     }
     else{
-        emailNode.style.border="3px green solid";
+        emailNode.css("border", "3px green solid");
         return true;
     }
-       
 }
 
 
-// age : number
-// required, 20 to 40 allowed,
-const ageNode = document.getElementById("age");
-const ageErrorNode = document.getElementById("ageerror");
-ageNode.addEventListener("keyup", () => validateAge());
+const ageNode = $("#age");
+const ageErrorNode = $("#ageerror");
+ageNode.on("keyup", () => validateAge());
 
 function validateAge() {
-  ageErrorNode.textContent = "";
-  const age = ageNode.value;
-  ageErrorNode.textContent = "";
+  ageErrorNode.text("");
+  const age = ageNode.val();
+  ageErrorNode.text("");
   if(age==""){
-    ageErrorNode.textContent = "Age is required";
-    ageErrorNode.style.color = "red";
+    ageErrorNode.text("Age is required");
     return false;
   }
   else if (age <20 || age>40) {
-    ageErrorNode.textContent = "Invalid age. Age must be between 20 and 40.";
-    ageErrorNode.style.color = "red";
+    ageErrorNode.text("Invalid age. Age must be between 20 and 40.");
     return false;
   } else {
-    ageErrorNode.style.color = "green";
     return true
   }
 }
 
-// username : text
-// required
-
-
-// password : password
-// required, pattern validation
-const passwordNode = document.getElementById("password");
-const passwordErrorNode = document.getElementById("passworderror");
-passwordNode.addEventListener("keyup", () => validatePassword());
-
+const passwordNode = $("#password");
+const passwordErrorNode = $("#passworderror");
+passwordNode.on("keyup", () => validatePassword());
 
 function validatePassword() {
-    passwordErrorNode.textContent = "";
-    const password = passwordNode.value;
+    passwordErrorNode.text("");
+    const password = passwordNode.val();
     const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$/;
     if (password == ""){
-        passwordErrorNode.textContent = "Password is required";   
+        passwordErrorNode.text("Password is required");   
         return false; 
     }
     else if (!passwordPattern.test(password)){
-        passwordErrorNode.textContent = "Password must be at least 8 characters long, include a number, and both a lowercase and an uppercase letter";   
+        passwordErrorNode.text("Password must be at least 8 characters long, include a number, and both a lowercase and an uppercase letter");   
         return false;
     }
     else{
         return true;
     }
-       
 }
 
-// confirmpassword : password
-// required ,  passvalue!=confirmpassvalue
-const confirmPasswordNode = document.getElementById("Confirmpassword");
-const confirmPasswordErrorNode = document.getElementById("confirmpassworderror");
-confirmPasswordNode.addEventListener("keyup", () => validateConfirmPassword());
+const confirmPasswordNode = $("#Confirmpassword");
+const confirmPasswordErrorNode = $("#confirmpassworderror");
+confirmPasswordNode.on("keyup", () => validateConfirmPassword());
 
 function validateConfirmPassword() {
-    confirmPasswordErrorNode.textContent = "";
-    const password = passwordNode.value;
-    const confirmPassword = confirmPasswordNode.value;
+    confirmPasswordErrorNode.text("");
+    const password = passwordNode.val();
+    const confirmPassword = confirmPasswordNode.val();
     if (confirmPassword == ""){
-        confirmPasswordErrorNode.textContent = "Please confirm your password";    
+        confirmPasswordErrorNode.text("Please confirm your password");    
         return false;
     }
     else if (password !== confirmPassword){
-        confirmPasswordErrorNode.textContent = "Passwords do not match"; 
+        confirmPasswordErrorNode.text("Passwords do not match"); 
         return false;
     }  
     else{
