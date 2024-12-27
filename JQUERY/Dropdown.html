@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Dropdown</title>
     <style>
-        .items{
-            text-decoration: underline;
+        .fontClass{
+            font-size: 20px;
+            font-style: italic;
+        }
+        .colorClass{
+            color: darkcyan;
+            background-color: yellow;
         }
     </style>
 </head>
@@ -24,17 +29,19 @@
     <script>
         /*C*/
         const courses=['JAVA', 'NODE','Python','GraphQL','SQL']
-        const selectNode=document.createElement("select");
-        selectNode.id="coursedropdown";
-        selectNode.title ="select course from dropdown";
+        const selectNode=$("<select>"); // createElement
+        selectNode.prop("id","coursedropdown");
+        selectNode.prop("title","select course from dropdown");
         courses.forEach((course)=>{
-            const optionNode=document.createElement("option");
-            optionNode.classList.add("items","dropdownlitems")
-            optionNode.value=course.toLowerCase();
-            optionNode.textContent=course   
+            const optionNode=$("<option>")
+            optionNode.addClass("fontClass") // do not use prop
+            optionNode.addClass("colorClass");
+            optionNode.val(course.toLowerCase());
+            optionNode.text(course.toUpperCase())   
             selectNode.append(optionNode);
         })
-        document.getElementById("top").after(selectNode);
+        $("#top").after(selectNode);
+        // remove : we can use , no effect , alternate: hide, fadeOut, slideUp
     </script>
 </body>
 </html>
